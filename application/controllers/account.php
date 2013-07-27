@@ -58,7 +58,7 @@ class Account extends CI_Controller {
 
 	public function signup_save() {
 		$input = $_POST;
-		$neededInputs = array('inputFullName', 'inputEmail', 'inputUserTwiterHandle', 'inputPassword1', 'inputPassword2');
+		$neededInputs = array('inputFullName', 'inputEmail', 'inputPassword1', 'inputPassword2');
 		$this->load->model('account_model');
 
 		foreach($neededInputs as $neededInput) {
@@ -78,7 +78,7 @@ class Account extends CI_Controller {
 		    return;
 		}
 
-		$this->account_model->saveNew($input['inputFullName'], $input['inputEmail'], $input['inputUserTwiterHandle'], $input['inputPassword1']);
+		$this->account_model->saveNew($input['inputFullName'], $input['inputEmail'], $input['inputPassword1']);
 	    header('Location: /');
 	    return;
 	}

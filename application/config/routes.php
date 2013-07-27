@@ -45,6 +45,9 @@ $route['signout'] = "account/signout";
 
 $route['account/signup/save'] = "account/signup_save";
 $route['account/login/save'] = "account/login_save";
+$route['event/list'] = "eventc/list_a";
+$route['event/edit'] = "eventc/edit";
+$route['event/create'] = "eventc/create";
 $route['home'] = "home/index";
 
 $route['404_override'] = '';

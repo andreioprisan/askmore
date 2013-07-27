@@ -26,12 +26,6 @@
       </div>
     </div>
     <div class="control-group">
-      <label for="inputEmail" class="col-lg-2 control-label">Twitter Handle</label>
-      <div class="controls">
-        <input type="text" class="control-control" name="inputUserTwiterHandle" placeholder="@yourhandle">
-      </div>
-    </div>
-    <div class="control-group">
       <label for="inputPassword1" class="col-lg-2 control-label">Password</label>
       <div class="controls">
         <input type="password" class="control-control" name="inputPassword1" placeholder="Password">

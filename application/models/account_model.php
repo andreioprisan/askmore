@@ -19,9 +19,9 @@ class Account_model extends CI_Model
 		}
 	}
 
-	public function saveNew($inputFullName, $inputEmail, $inputUserTwiterHandle, $inputPassword)
+	public function saveNew($inputFullName, $inputEmail, $inputPassword)
 	{
-		$this->db->insert('users', array('name' => $inputFullName, 'email' => $inputEmail, 'password' => sha1(sha1($inputPassword).$inputEmail), 'handle' => $inputUserTwiterHandle));
+		$this->db->insert('users', array('name' => $inputFullName, 'email' => $inputEmail, 'password' => sha1(sha1($inputPassword).$inputEmail)));
 	}
 
 	public function loginVerify($email, $password) 
@@ -34,7 +34,6 @@ class Account_model extends CI_Model
 			return $query->row();
 		}
 	}
-
 
 	function get($table, $where)
 	{

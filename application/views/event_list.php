@@ -2,7 +2,7 @@
 <div class="bs-masthead">
   <div class="container">
   	
-	<a class="btn btn-large btn-block btn-primary span3 pull-right" type="button" href="/event/create">Create New Event</a>
+	<button class="btn btn-large btn-block btn-primary span3 pull-right" type="button">Create New Event</button>
 	<br><br><br><br>  	
 	<table class="table">
               <thead>

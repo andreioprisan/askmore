@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>AskMoreNow</title>
-	<link href="public/css/bootstrap.min.css" rel="stylesheet">
-	<link href="public/css/bootstrap-responsive.min.css" rel="stylesheet">
-  <link href="public/css/app.css" rel="stylesheet">
+	<link href="/public/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/public/css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link href="/public/css/app.css" rel="stylesheet">
 </head>
 
 <html>
