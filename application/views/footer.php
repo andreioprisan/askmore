@@ -1,5 +1,4 @@
 
-</div>
 
 <div class="bs-old-docs">
   <div class="container">

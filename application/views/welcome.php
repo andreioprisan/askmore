@@ -1,4 +1,5 @@
 
+<div class="bs-masthead">
 
   <div class="container">
     <h1>social question service</h1>
@@ -7,3 +8,4 @@
     <a class="btn btn-primary btn-large" href="/account/signup">Get started today for free!</a>
   </div>
 
+</div>

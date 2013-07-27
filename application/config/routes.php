@@ -41,6 +41,8 @@
 $route['default_controller'] = "welcome";
 $route['login'] = "account/login";
 $route['signup'] = "account/signup";
+$route['account/signup/save'] = "account/signup_save";
+$route['account/login/save'] = "account/login_save";
 
 $route['404_override'] = '';
 
