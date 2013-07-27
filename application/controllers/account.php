@@ -33,9 +33,15 @@ class Account extends CI_Controller {
 
 		$userDetails = $this->account_model->loginVerify($input['inputEmail'], $input['inputPassword1']);
 		if ($userDetails) {
-			$this->session->set_userdata($userDetails);
+			$in = (array)$userDetails;
+			$this->session->set_userdata('userid', $in['userid']);
+			$this->session->set_userdata('name', $in['name']);
+			$this->session->set_userdata('email', $in['email']);
+			$this->session->set_userdata('password', $in['password']);
+			$this->session->set_userdata('handle', $in['handle']);
 			
-		    header('Location: /');
+			setcookie('ask', base64_encode(json_encode($in)), time()+3600, '/', '.'.$_SERVER['SERVER_NAME']);
+		    header('Location: /home');
 		    return;
 		} else {
 		    header('Location: /login?error=2');
@@ -43,6 +49,11 @@ class Account extends CI_Controller {
 		}
 
 		return;
+	}
+
+	public function signout() {
+		setcookie('ask', '', time()-3600, '/', '.'.$_SERVER['SERVER_NAME']);
+			header('Location: /');		
 	}
 
 	public function signup_save() {

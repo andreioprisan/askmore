@@ -15,6 +15,16 @@
   <div class="container">
     <a href="../" class="navbar-brand">ask more now</a>
     <div class="nav-collapse collapse bs-navbar-collapse">
+      <?php if (isset($userid) && isset($password) && $userid != 0 && $password != null) { ?>
+      <ul class="nav navbar-nav pull-right">
+        <li class="">
+          <a href="/home">Hi, <?php echo $name ?></a>
+        </li>
+        <li>
+          <a href="/signout">Sign Out</a>
+        </li>
+      </ul>      
+      <?php } else { ?>
       <ul class="nav navbar-nav pull-right">
         <li>
           <a href="/plans">Plans</a>
@@ -26,6 +36,7 @@
           <a href="/signup">Sign Up</a>
         </li>
       </ul>
+      <?php } ?>
     </div>
   </div>
 </div>
