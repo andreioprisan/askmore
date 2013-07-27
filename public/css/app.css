@@ -1,3 +1,14 @@
+.navbar-inner {
+	background-color: white;
+	font-color: black;
+	background-image: none;
+}
+
+.navbar .nav.pull-right {
+font-size: 150%;
+font-weight: 200;
+margin-top:2px;
+}
 
 .bs-masthead {
 	margin-top: 50px;

@@ -13,31 +13,29 @@
   <?php } ?>
 
   <form class="form-horizontal" action="account/signup/save" method="post">
-    <div class="form-group">
+    <div class="control-group">
       <label for="inputEmail" class="col-lg-2 control-label">Full Name</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" name="inputFullName" placeholder="FirstName LastName">
+      <div class="controls">
+        <input type="text" class="control-control" name="inputFullName" placeholder="FirstName LastName">
       </div>
     </div>
-    <div class="form-group">
+    <div class="control-group">
       <label for="inputEmail" class="col-lg-2 control-label">Email</label>
       <div class="controls">
-        <input type="text" class="form-control" name="inputEmail" placeholder="Email">
+        <input type="text" class="control-control" name="inputEmail" placeholder="Email">
       </div>
     </div>
-    <div class="form-group">
+    <div class="control-group">
       <label for="inputEmail" class="col-lg-2 control-label">Twitter Handle</label>
       <div class="controls">
-        <input type="text" class="form-control" name="inputUserTwiterHandle" placeholder="@yourhandle">
+        <input type="text" class="control-control" name="inputUserTwiterHandle" placeholder="@yourhandle">
       </div>
     </div>
-    <div class="form-group">
+    <div class="control-group">
       <label for="inputPassword1" class="col-lg-2 control-label">Password</label>
       <div class="controls">
-        <input type="password" class="form-control" name="inputPassword1" placeholder="Password">
-      </div>
-      <div class="col-lg-5">
-        <input type="password" class="form-control" name="inputPassword2" placeholder="Password Confirmation">
+        <input type="password" class="control-control" name="inputPassword1" placeholder="Password">
+        <input type="password" class="control-control" name="inputPassword2" placeholder="Password Confirmation">
       </div>
     </div>    
     <div class="form-group">

@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>AskMore</title>
-
+	<title>AskMoreNow</title>
 	<link href="public/css/bootstrap.min.css" rel="stylesheet">
 	<link href="public/css/bootstrap-responsive.min.css" rel="stylesheet">
   <link href="public/css/app.css" rel="stylesheet">
@@ -13,7 +12,7 @@
 
 <div class="navbar">
   <div class="navbar-inner">
-    <a class="brand" href="#">ask more now</a>
+    <a class="brand" href="/">ask more now</a>
 
       <?php if (isset($userid) && isset($password) && $userid != 0 && $password != null) { ?>
       <ul class="nav pull-right">
