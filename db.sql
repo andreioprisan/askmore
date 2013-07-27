@@ -13,7 +13,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `askmore`
 --
-drop database 'askmore';
 drop database 'askmorenow';
 
 -- --------------------------------------------------------
