@@ -54,8 +54,8 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
-$db['default']['password'] = 'mysqlpass';
-$db['default']['database'] = 'askmore';
+$db['default']['password'] = 'secret';
+$db['default']['database'] = 'askmorenow';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
@@ -70,7 +70,7 @@ $db['default']['stricton'] = FALSE;
 
 $db['prod']['hostname'] = 'localhost';
 $db['prod']['username'] = 'root';
-$db['prod']['password'] = 'a2gn4vy2o87g3hwue';
+$db['prod']['password'] = 'secret';
 $db['prod']['database'] = 'askmorenow';
 $db['prod']['dbdriver'] = 'mysql';
 $db['prod']['dbprefix'] = '';
