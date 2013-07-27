@@ -1,0 +1,50 @@
+
+.bs-masthead {
+	margin-top: 50px;
+}
+
+.bs-docs-nav {
+background-color: #357ebd;
+}
+
+.bs-masthead {
+padding-top: 100px;
+padding-bottom: 100px;
+}
+
+.bs-masthead {
+position: relative;
+padding: 30px 15px;
+text-align: center;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+color: white;
+}
+
+.navbar-brand {
+	color: white;
+}
+body {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.428571429;
+color: #333333;
+}
+
+.navbar-inverse .navbar-brand {
+color: white;
+}
+
+
+.bs-docs-home .bs-old-docs {
+text-align: center;
+border-top: 1px solid #e5e5e5;
+}
+
+.bs-old-docs {
+padding: 15px 20px;
+color: #777;
+background-color: #fafafa;
+border-bottom: 1px solid #e5e5e5;
+}
