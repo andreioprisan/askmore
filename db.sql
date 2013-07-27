@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 26, 2013 at 10:32 PM
+-- Generation Time: Jul 26, 2013 at 10:46 PM
 -- Server version: 5.5.25
 -- PHP Version: 5.4.4
 
@@ -26,6 +26,9 @@ CREATE TABLE `events` (
   `name` varchar(100) NOT NULL,
   `location` varchar(500) NOT NULL,
   `description` varchar(2000) NOT NULL,
+  `activefromdate` datetime NOT NULL,
+  `startdate` datetime NOT NULL,
+  `enddate` datetime NOT NULL,
   PRIMARY KEY (`eventid`),
   KEY `id` (`eventid`),
   KEY `moderatorid` (`moderatorid`)
