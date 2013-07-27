@@ -22,6 +22,10 @@ class Welcome extends CI_Controller {
 		$this->load->view('nav');
 		$this->load->view('welcome');
 		$this->load->view('footer');
+
+		$data = $this->session->all_userdata();
+		var_dump($data);
+
 	}
 }
 

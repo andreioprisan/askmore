@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 26, 2013 at 10:46 PM
+-- Generation Time: Jul 27, 2013 at 12:01 PM
 -- Server version: 5.5.25
 -- PHP Version: 5.4.4
 
@@ -59,10 +59,19 @@ CREATE TABLE `questions` (
 --
 
 CREATE TABLE `users` (
-  `userid` bigint(20) NOT NULL,
+  `userid` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `handle` varchar(50) NOT NULL,
   PRIMARY KEY (`userid`),
   KEY `userid` (`userid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`userid`, `name`, `email`, `password`, `handle`) VALUES
+(1, 'Andrei Oprisan', 'andrei@oprisan.com', 'b695810086a5213f4e70736c5e384b646e4363b8', '@andreioprisan'),
+(2, 'Joe Moe', 'andrei.oprisan@mac.com', '095cb54da1a3457e964d1d25b795857fb4d4a63f', '@test');

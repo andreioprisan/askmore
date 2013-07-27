@@ -31,7 +31,7 @@ class Account_model extends CI_Model
 		if (count($results) == 0) {
 			return false;
 		} else {
-			return $query->row()->userid;
+			return $query->row();
 		}
 	}
 

@@ -2,6 +2,15 @@
 <div class="container" style="padding-top: 50px">
 <p><center><h1>Sign Up</h1></center></p>
 <br>
+  <?php if (isset($_GET['error'])) { ?>
+	  <?php if ($_GET['error'] == "3") { ?>
+	  <div class="alert alert-danger">That email address is already taken. Please use a different email address!</div>
+	  <?php } else if ($_GET['error'] == "2") { ?>
+	  <div class="alert alert-danger">Please make sure that your password and password confirmation match!</div>
+	  <?php } else if ($_GET['error'] == "1") { ?>
+	  <div class="alert alert-danger">Please make sure that your fill out all the required fields!</div>
+	  <?php } ?>
+  <?php } ?>
 
   <form class="form-horizontal" action="account/signup/save" method="post">
     <div class="form-group">

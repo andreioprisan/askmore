@@ -20,8 +20,29 @@ class Account extends CI_Controller {
 	}
 
 	public function login_save() {
-		$input = $_POST	;
-		var_dump($input);
+		$this->load->model('account_model');
+		$input = $_POST;
+
+		$neededInputs = array('inputEmail', 'inputPassword1');
+		foreach($neededInputs as $neededInput) {
+			if (!array_key_exists($neededInput, $input)) {
+			    header('Location: /login?error=1');
+			    return;
+			}
+		}
+
+		$userDetails = $this->account_model->loginVerify($input['inputEmail'], $input['inputPassword1']);
+		if ($userDetails) {
+			$this->session->set_userdata($userDetails);
+			
+		    header('Location: /');
+		    return;
+		} else {
+		    header('Location: /login?error=2');
+		    return;			
+		}
+
+		return;
 	}
 
 	public function signup_save() {
@@ -30,21 +51,25 @@ class Account extends CI_Controller {
 		$this->load->model('account_model');
 
 		foreach($neededInputs as $neededInput) {
-			if (!array_key_exists($neededInput, $neededInputs)) {
-			    header('/signup?error=1');
+			if (!array_key_exists($neededInput, $input)) {
+			    header('Location: /signup?error=1');
+			    return;
 			}
 		}
 
 		if ($input['inputPassword1'] != $input['inputPassword2']) {
-		    header('/signup?error=2');
+		    header('Location: /signup?error=2');
+		    return;
 		}
 
 		if (!$this->account_model->isAvailable($input['inputEmail'])) {
-		    header('/signup?error=3');
+		    header('Location: /signup?error=3');
+		    return;
 		}
 
 		$this->account_model->saveNew($input['inputFullName'], $input['inputEmail'], $input['inputUserTwiterHandle'], $input['inputPassword1']);
-	    header('/');
+	    header('Location: /');
+	    return;
 	}
 
 }
