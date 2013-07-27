@@ -55,11 +55,6 @@ color: white;
 <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
   <div class="container">
     <a href="../" class="navbar-brand">ask more now</a>
-    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
     <div class="nav-collapse collapse bs-navbar-collapse">
       <ul class="nav navbar-nav pull-right">
         <li>
