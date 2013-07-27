@@ -21,19 +21,19 @@
     </div>
     <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-      <div class="col-lg-10">
+      <div class="controls">
         <input type="text" class="form-control" name="inputEmail" placeholder="Email">
       </div>
     </div>
     <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Twitter Handle</label>
-      <div class="col-lg-10">
+      <div class="controls">
         <input type="text" class="form-control" name="inputUserTwiterHandle" placeholder="@yourhandle">
       </div>
     </div>
     <div class="form-group">
       <label for="inputPassword1" class="col-lg-2 control-label">Password</label>
-      <div class="col-lg-5">
+      <div class="controls">
         <input type="password" class="form-control" name="inputPassword1" placeholder="Password">
       </div>
       <div class="col-lg-5">
@@ -42,7 +42,7 @@
     </div>    
     <div class="form-group">
       <label for="inputSubmit" class="col-lg-2 control-label"></label>
-      <div class="col-lg-10">
+      <div class="controls">
         <button type="submit" class="btn btn-default">Sign Up</button>
       </div>
     </div>  </form>

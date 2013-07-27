@@ -13,21 +13,21 @@
   <?php } ?>
 
   <form class="form-horizontal" action="account/login/save" method="post">
-    <div class="form-group">
+    <div class="control-group">
       <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-      <div class="col-lg-10">
+      <div class="controls">
         <input type="text" class="form-control" name="inputEmail" placeholder="Email">
       </div>
     </div>
-    <div class="form-group">
+    <div class="control-group">
       <label for="inputPassword1" class="col-lg-2 control-label">Password</label>
-      <div class="col-lg-10">
+      <div class="controls">
         <input type="password" class="form-control" name="inputPassword1" placeholder="Password">
       </div>
     </div>    
-    <div class="form-group">
+    <div class="control-group">
       <label for="inputSubmit" class="col-lg-2 control-label"></label>
-      <div class="col-lg-10">
+      <div class="controls">
         <button type="submit" class="btn btn-default">Login</button>
       </div>
     </div>  </form>

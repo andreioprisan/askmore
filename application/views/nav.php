@@ -5,18 +5,18 @@
 	<title>AskMore</title>
 
 	<link href="public/css/bootstrap.min.css" rel="stylesheet">
-	<link href="public/css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="public/css/bootstrap-responsive.min.css" rel="stylesheet">
   <link href="public/css/app.css" rel="stylesheet">
 </head>
 
 <html>
 
-<div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
-  <div class="container">
-    <a href="../" class="navbar-brand">ask more now</a>
-    <div class="nav-collapse collapse bs-navbar-collapse">
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">ask more now</a>
+
       <?php if (isset($userid) && isset($password) && $userid != 0 && $password != null) { ?>
-      <ul class="nav navbar-nav pull-right">
+      <ul class="nav pull-right">
         <li class="">
           <a href="/home">Hi, <?php echo $name ?></a>
         </li>
@@ -25,7 +25,7 @@
         </li>
       </ul>      
       <?php } else { ?>
-      <ul class="nav navbar-nav pull-right">
+      <ul class="nav pull-right">
         <li>
           <a href="/plans">Plans</a>
         </li>
@@ -37,7 +37,8 @@
         </li>
       </ul>
       <?php } ?>
-    </div>
+
   </div>
 </div>
+
 

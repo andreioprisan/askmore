@@ -18,24 +18,12 @@
 	text-align: center;
 }
 
-.navbar-inverse .navbar-nav>li>a {
-	color: white;
-}
-
-.navbar-brand {
-	color: white;
-}
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.428571429;
 	color: #333333;
 }
-
-.navbar-inverse .navbar-brand {
-	color: white;
-}
-
 
 .bs-docs-home .bs-old-docs {
 	text-align: center;
@@ -78,4 +66,3 @@ body {
 	.downArrow{}
 	.userQuestion{}
 	.userName{font-weight: bold;}
-
