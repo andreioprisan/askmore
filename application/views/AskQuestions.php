@@ -4,25 +4,36 @@
 
 	<script>
 		$(document).ready(function(){
-
+			var totalvotes = 1;
 			$("#writeQuestion").click(function(){
 				$(".addAuthor").show();
 				$(".gap").css("padding-bottom", "125px");
 			});
 
 			$(".upArrow").click(function() {
+				if (totalvotes <= 0) {
+					return;
+				} 
+
 				$(this).find('.upArrowImg').attr("src", "http://askmo.re/public/img/upArrow_active.jpg") ;
 				var currentScore = parseInt($(this).next().text());
 				$(this).next().text(currentScore + 1);
 				$(this).next().next().find('.downArrowImg').attr("src", "http://askmo.re/public/img/downArrow.jpg") ;
+				
+				totalvotes--;
 			});
 
 			$(".downArrow").click(function() {
+				if (totalvotes <= 0) {
+					return;
+				} 
+
 				$(this).find('.downArrowImg').attr("src", "http://askmo.re/public/img/downArrow_active.jpg") ;
 				var currentScore = parseInt($(this).prev().text());
 				$(this).prev().text(currentScore - 1);
 				$(this).prev().prev().find('.upArrowImg').attr("src", "http://askmo.re/public/img/upArrow.jpg") ;
-
+				
+				totalvotes--;
 			});
 		});
 	</script>
@@ -69,7 +80,7 @@
 					</div>
 					<div class="userQuestion">
 						<p><?php echo $question->text ?></p>
-						<div class="">asked by <b><?php echo $question->author ?></b> via <b><?php echo $question->source ?></b> on  <b><?php echo date('m/d/Y H:i', strtotime($question->createdat)) ?></b></div>
+						<div class="" style="font-size: 80%">asked by <b><?php echo $question->author ?></b> via <b><?php echo $question->source ?></b> on <b><?php echo date('m/d/y h:iA', strtotime($question->createdat)) ?></b></div>
 					</div>
 				</div>
 				<div class="borderBottom"></div>
