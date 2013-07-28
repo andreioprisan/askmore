@@ -8,6 +8,8 @@ class Eventc extends CI_Controller {
 	}
 
 	public function list_a() {
+		$this->load->model('eventc_model');
+
 		if (isset($_COOKIE['ask'])) {
 			$this->userdata = (array)json_decode(base64_decode($_COOKIE['ask']));
 		} else {
@@ -15,8 +17,10 @@ class Eventc extends CI_Controller {
 			return;
 		}
 
+		$eventsList = $this->eventc_model->getAllByAuthor($this->userdata['userid']);
+
 		$this->load->view('nav', $this->userdata);
-		$this->load->view('home', $this->userdata);
+		$this->load->view('event_list', array('eventsList' => (array)$eventsList));
 		$this->load->view('footer');
 	}
 
@@ -50,7 +54,7 @@ class Eventc extends CI_Controller {
 
 		$this->eventc_model->saveNew($input);
 		header('Location: /event/list');
-		
+
 	}
 
 	public function edit() {

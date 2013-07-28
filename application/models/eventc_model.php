@@ -93,6 +93,16 @@ class Eventc_model extends CI_Model
 		}	
 	}
 
+	public function getAllByAuthor($userid) {
+		$query = $this->db->get_where('events', array('moderatorid' => $userid));
+		$results = $query->result();
+		if (count($results) == 0) {
+			return false;
+		} else {
+			return $results;
+		}		
+	}
+
 	function update($table, $where, $data)
 	{
 		var_dump($where);
