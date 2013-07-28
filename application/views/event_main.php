@@ -80,7 +80,7 @@ window.setInterval(function(){
           var newdom = '<tr>\
               <td style="width: 5%; text-align: center; display:none" id="'+item.questionid+'">\
                 <span data-qid="'+item.questionid+'" class="icon-chevron-up upArrowW" style="color: gray; font-size: 20px;"></span><br>\
-                <span class="questionScore" style="font-weight: bold; display: inline;">'+item.questionid+'</span><br>\
+                <span class="questionScore" style="font-weight: bold; display: inline;">'+item.score+'</span><br>\
                 <span data-qid="'+item.questionid+'" class="icon-chevron-down downArrowW" style="color: gray; font-size: 20px;"></span>\
               </td>\
               <td>'+item.text+'<br>\
