@@ -25,7 +25,8 @@ class Account extends CI_Controller {
 
 		$neededInputs = array('inputEmail', 'inputPassword1');
 		foreach($neededInputs as $neededInput) {
-			if (!array_key_exists($neededInput, $input)) {
+			if (!array_key_exists($neededInput, $input) ||
+				empty($input[$neededInput])) {
 			    header('Location: /login?error=1');
 			    return;
 			}

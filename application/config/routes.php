@@ -48,6 +48,8 @@ $route['account/login/save'] = "account/login_save";
 $route['event/list'] = "eventc/list_a";
 $route['event/edit'] = "eventc/edit";
 $route['event/create'] = "eventc/create";
+$route['event/create/save'] = "eventc/createnew";
+
 $route['home'] = "home/index";
 
 $route['404_override'] = '';
