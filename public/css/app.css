@@ -63,7 +63,7 @@ body {
 	float:left;}
 
 	.tinyLogoImg{height:20px;}
-
+	#sort{text-align:left; margin-left: 255px; font-size: small; color:#999;}
 	.questionBlock{}
 	.questionBlock p{margin:0; }
 
@@ -72,6 +72,7 @@ body {
 		height: 2px;
 		background: url(../img/line-sep.jpg) repeat-x;
 		clear: both;
+		padding-bottom: 10px;
 	}
 
 	
@@ -87,13 +88,17 @@ body {
 
 
 	.userQuestion{float:left; width:80%;}
+	
 	.userName{font-weight: bold;}
+	.submitButton{margin-bottom:5px;}
 
 
-.clearD{clear: both;}
+	.gap{clear: both; width: 100%; padding-bottom: 85px}
+	#writeQuestion{width:350px;}
+	#authorInput{width:310px;}
 
-.questionMeta{width:20%; float:left;}
-
+	.questionMeta{width:50px; padding-right: 10px; float:left;}
+	.topnav1{background:#fff; position:fixed;margin-top:0;width:100%;}
 
 
 
