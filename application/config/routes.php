@@ -50,7 +50,8 @@ $route['event/edit'] = "eventc/edit";
 $route['event/create'] = "eventc/create";
 $route['event/create/save'] = "eventc/createnew";
 $route['twiml/sms'] = "twiml/sms";
-$route['twiml/sms'] = "twiml/voice";
+$route['twiml/voice'] = "twiml/voice";
+
 $route['(:any)'] = "eventc/lookup/$1";
 
 $route['home'] = "home/index";
