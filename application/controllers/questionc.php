@@ -11,19 +11,23 @@ class Questionc extends CI_Controller {
 		$this->load->model('questionc_model');
 
 		$input = $_POST;
-		var_dump($input);
-		die();
 		$neededInputs = array('eventid', 'question');
 		foreach($neededInputs as $neededInput) {
 			if (!array_key_exists($neededInput, $input) ||
 				empty($input[$neededInput])) {
-			    header('Location: /'.$input['backto'].'?error=1');
+				$loc = 'Location: /'.gethostname().$input['backto'].'?error=1';
+			    header($loc);
 			    return;
 			}
 		}
 
-		$this->questionc_model->saveNew($input);
-		header('Location: /'.$input['backto'].'');
+		if (!isset($input['author'])) {
+			$input['author'] = "anonymous";
+		}
+
+		$this->questionc_model->saveNew($input['eventid'], $input['question'], 'app', $input['author']);
+		$loc = 'Location: '.$input['backto'];
+		header($loc);
 
 	}
 

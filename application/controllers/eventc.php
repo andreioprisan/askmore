@@ -72,20 +72,43 @@ class Eventc extends CI_Controller {
 	}	
 
 	public function lookup($slug) {
+		$isMobile = false;
+		if ($this->agent->is_browser())
+		{
+		    $agent = $this->agent->browser().' '.$this->agent->version();
+		    $isMobile = false;
+		}
+		elseif ($this->agent->is_robot())
+		{
+		    $agent = $this->agent->robot();
+		    $isMobile = false;
+		}
+		elseif ($this->agent->is_mobile())
+		{
+		    $agent = $this->agent->mobile();
+		    $isMobile = true;
+		}
+
 		$this->load->model('eventc_model');
 		$this->load->model('questionc_model');
 
 		$event_details = $this->eventc_model->getEventBySlug($slug);
 		$questions_details = $this->questionc_model->getQuestionsById($event_details->eventid);
 		$questions_count = $this->questionc_model->getCount($event_details->eventid);
-
-		$this->load->view('nav', $this->userdata);
-		$this->load->view('event_main', 
-			array_merge(
+		$coreData = 			array_merge(
 				array('event'=>(array)json_decode(json_encode($event_details))), 
 				array('questions' => $questions_details),
 				array('questions_count' => $questions_count)
-			));
+			);
+
+		$this->load->view('nav', $this->userdata);
+
+		if (!$isMobile) {
+			$this->load->view('event_main', $coreData);
+		} else {
+			echo "mobile";
+		}
+
 		$this->load->view('footer');
 
 

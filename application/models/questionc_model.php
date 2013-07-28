@@ -9,26 +9,26 @@ class Questionc_model extends CI_Model
 	}
 
 
-	public function saveNew($data)
+	public function saveNew($eventid, $content, $source, $author)
 	{
-		
-		$this->db->insert('events', 
-			array(	'name' => $data['inputEventName'],
-					'location' => $data['inputLocation'],
-					'description' => $data['inputDescription'],
-					'hashtag' => $data['inputHashtag'],
-					'startdate' => $data['inputStartDate'],
-					'enddate' => $data['inputEndDate'],
-					'moderatorid' => $userdata['userid'],
-					'phone' => $friendlyNumber,
-					'slug'	=> $slug));
+		$question = array(
+			'eventid' => $eventid,
+			'text'	=> $content,
+			'source' => $source,
+			'author' => $author,
+			'createdat' => date("Y-m-d H:i:s"),
+			'status' => 'active'
+			);
 
+		$this->db->insert('questions', $question);
 	}
 
 
 	public function getQuestionsById($eventid) {
-		$query = $this->db->get_where('questions', array('eventid' => $eventid));
+		$sql = 'select * from questions where eventid="'.$eventid.'" order by score desc, createdat desc';
+		$query = $this->db->query($sql);
 		$results = $query->result();
+		
 		if (count($results) == 0) {
 			return false;
 		} else {

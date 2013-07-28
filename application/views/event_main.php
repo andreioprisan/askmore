@@ -27,7 +27,7 @@
         <tr>
           <td style="width: 5%"><?php echo $question->score ?></td>
           <td><?php echo $question->text ?><br>
-              via <b><?php echo $question->source ?></b> from <b><?php echo $question->author ?></b>
+              asked by <b><?php echo $question->author ?></b> via <b><?php echo $question->source ?></b> on  <b><?php echo date('m/d/Y H:i', strtotime($question->createdat)) ?></b>
               </td>
         </tr>
         <?php } ?>
