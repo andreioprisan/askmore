@@ -43,7 +43,7 @@
 		<div class="topnav1">
 			<div class="headerControl">
 				<div class="logoTiny"><img class="tinyLogoImg" src="/public/img/AskMoreLogo_tiny.png"></div>
-				<div id="sort" class="">Sort: <a class="sortHref" href="#">Top</a> | <a href="#" class="sortHref">New</a></div>
+				<!--<div id="sort" class="">Sort: <a class="sortHref" href="#">Top</a> | <a href="#" class="sortHref">New</a></div>-->
 			</div>
 			<br>
 			<div class="questonHeader">
@@ -54,7 +54,7 @@
 					<input style="margin-left: 5px;" id="writeQuestion" name="question" type="text" value="Ask a question" onfocus="if (this.value == 'Ask a question') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Ask a question';}" maxlength="140">
 					<div class="addAuthor">
 						<input style="margin-left: 5px;"  id="authorInput" name="author" type="text" value="Your name [optional]" onfocus="if (this.value == 'Your name [optional]') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Your name [optional]';}">
-						<input type="submit" class="submitButton" name="submitQuestion" value="Go" class="btn btn-primary" style="float: right; margin-right: 5px;" /> 
+						<input type="submit" class="submitButton" name="submitQuestion" value="Go" class="btn btn-primary" /> 
 					</div>
 				</form>
 			</div>
