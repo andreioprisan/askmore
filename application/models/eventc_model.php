@@ -32,9 +32,9 @@ class Eventc_model extends CI_Model
             try {
 	            $number = $twilioClient->account->incoming_phone_numbers->create(array(
 	                'PhoneNumber' => $potentialNumberToPurchase,
-                    "VoiceUrl" => "https://askmo.re/twiml/voice",
+                    "VoiceUrl" => "http://askmo.re/twiml/voice",
 				    "VoiceMethod" => "POST",
-					"SmsUrl" => "https://askmo.re/twiml/sms",
+					"SmsUrl" => "http://askmo.re/twiml/sms",
 					"SmsMethod" => "POST"
 	            ));
 	        } catch (Exception $e) {
