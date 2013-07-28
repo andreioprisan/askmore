@@ -73,20 +73,8 @@ class Eventc extends CI_Controller {
 
 	public function lookup($slug) {
 		$isMobile = false;
-		if ($this->agent->is_browser())
-		{
-		    $agent = $this->agent->browser().' '.$this->agent->version();
-		    $isMobile = false;
-		}
-		elseif ($this->agent->is_robot())
-		{
-		    $agent = $this->agent->robot();
-		    $isMobile = false;
-		}
-		elseif ($this->agent->is_mobile())
-		{
-		    $agent = $this->agent->mobile();
-		    $isMobile = true;
+		if (gethostname() == "m.askmo.re") {
+			$isMobile = true;
 		}
 
 		$this->load->model('eventc_model');
@@ -102,6 +90,8 @@ class Eventc extends CI_Controller {
 			);
 
 		$this->load->view('nav', $this->userdata);
+
+		var_dump($agent);
 
 		if (!$isMobile) {
 			$this->load->view('event_main', $coreData);
