@@ -8,22 +8,22 @@ class Questionc extends CI_Controller {
 	}
 
 	public function createnew() {
-		$this->load->model('eventc_model');
+		$this->load->model('questionc_model');
 
 		$input = $_POST;
 		var_dump($input);
 		die();
-		$neededInputs = array('eventid', 'question', 'author');
+		$neededInputs = array('eventid', 'question');
 		foreach($neededInputs as $neededInput) {
 			if (!array_key_exists($neededInput, $input) ||
 				empty($input[$neededInput])) {
-			    header('Location: /event/create?error=1');
+			    header('Location: /'.$input['backto'].'?error=1');
 			    return;
 			}
 		}
 
-		$this->eventc_model->saveNew($input);
-		header('Location: /event/list');
+		$this->questionc_model->saveNew($input);
+		header('Location: /'.$input['backto'].'');
 
 	}
 
