@@ -37,8 +37,15 @@ class Questionc_model extends CI_Model
 		$query = $this->db->query($sql);
 	}
 
-	public function getQuestionsById($eventid) {
-		$sql = 'select * from questions where eventid="'.$eventid.'" order by score desc, createdat desc';
+	public function getQuestionsById($eventid, $sort = "both") {
+		if ($sort == "both" || $sort == "") {
+			$sort_sql = "order by score desc, createdat desc";
+		} else if ($sort == "top") {
+			$sort_sql = "order by score desc";
+		} else if ($sort == "new") {
+			$sort_sql = "order by createdat desc";
+		} 
+		$sql = 'select * from questions where eventid="'.$eventid.'" '.$sort_sql.'';
 		$query = $this->db->query($sql);
 		$results = $query->result();
 		

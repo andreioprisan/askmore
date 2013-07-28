@@ -92,17 +92,24 @@ class Eventc extends CI_Controller {
 		}
 		//$isMobile = true;
 
+		if (isset($_GET['sort'])) {
+			$sort = array('thissort' => $_GET['sort']);
+		} else {
+			$sort = array('thissort' => 'both');
+		}
+
 		$this->load->model('eventc_model');
 		$this->load->model('questionc_model');
 
 		$event_details = $this->eventc_model->getEventBySlug($slug);
-		$questions_details = $this->questionc_model->getQuestionsById($event_details->eventid);
+		$questions_details = $this->questionc_model->getQuestionsById($event_details->eventid, $sort['thissort']);
 		$questions_count = $this->questionc_model->getCount($event_details->eventid);
 		$coreData = 			array_merge(
 				array('event'=>(array)json_decode(json_encode($event_details))), 
 				array('questions' => $questions_details),
 				array('questions_count' => $questions_count),
-				array('userdata' => $this->userdata)
+				array('userdata' => $this->userdata),
+				$sort
 			);
 
 		if (!$isMobile) {

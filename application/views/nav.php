@@ -57,7 +57,7 @@
 
         totalvotes--;
       });
-      
+
       });  
   </script>
 </head>

@@ -3,7 +3,19 @@
 		<div class="topnav1">
 			<div class="headerControl">
 				<div class="logoTiny"><img class="tinyLogoImg" src="/public/img/AskMoreLogo_tiny.png"></div>
-				<div id="sort" class="">Sort: <a class="sortHref" href="#">Top</a> | <a href="#" class="sortHref">New</a></div>
+				<div id="sort" class="">Sort: 
+					<?php
+					$sorts = array('top', 'new','both');
+					foreach ($sorts as $sort) { 
+						if ($sort == $thissort) { ?>
+							<a class="sortHref" href="/<?php echo $event['slug'] ?>?sort=<?php echo $sort;?>" style="color: black;"><?php echo ucfirst($sort);?></a> 
+							<?php if ($sort != "both") { echo "|"; } ?>
+						<?php } else { ?>
+							<a class="sortHref" href="/<?php echo $event['slug'] ?>?sort=<?php echo $sort;?>"><?php echo ucfirst($sort);?></a>
+							<?php if ($sort != "both") { echo "|"; } ?>
+						<?php } ?>
+					<?php
+					} ?>
 			</div>
 			<br>
 			<div class="questonHeader">
