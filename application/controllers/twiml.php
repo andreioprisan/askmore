@@ -7,7 +7,7 @@ class Twiml extends CI_Controller {
 		$this->login();
 	}
 
-	public function sms()
+	public function voice()
 	{
 		header("Content-type: text/xml; charset=utf-8");
 		$a = '<?xml version="1.0" encoding="UTF-8"?>
@@ -18,7 +18,7 @@ class Twiml extends CI_Controller {
 		echo $a;
 	}
 
-	public function voice()
+	public function sms()
 	{
 		header("Content-type: text/xml; charset=utf-8");
 		$a = '<?xml version="1.0" encoding="UTF-8"?>
