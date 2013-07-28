@@ -472,7 +472,7 @@
 
       										<div class="price">
       											<div class="inside">
-      												<span class="super">$</span><span class="amt">8</span> <span class="sub">/mo</span>
+      												<span class="super">$</span><span class="amt">10</span> <span class="sub">/mo</span>
       											</div>
 
       										</div>
@@ -500,7 +500,7 @@
 
       										<div class="price">
       											<div class="inside">
-      												<span class="super">$</span><span class="amt">24</span> <span class="sub">/mo</span>
+      												<span class="super">$</span><span class="amt">ask</span>
       											</div>
       										</div>
       										<div class="most-popular">
