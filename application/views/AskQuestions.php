@@ -77,7 +77,7 @@
 					<div class="upArrow">
 						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScoreDiv">75</div>
+					<div class="questionScoreDiv">65</div>
 					<div class="downArrow">
 
 						<img class="downArrowImg" src="public/img/downArrow.jpg">
@@ -98,7 +98,7 @@
 					<div class="upArrow">
 						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScoreDiv">75</div>
+					<div class="questionScoreDiv">40</div>
 					<div class="downArrow">
 
 						<img class="downArrowImg" src="public/img/downArrow.jpg">
@@ -119,7 +119,7 @@
 					<div class="upArrow">
 						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScoreDiv">75</div>
+					<div class="questionScoreDiv">30</div>
 					<div class="downArrow">
 
 						<img class="downArrowImg" src="public/img/downArrow.jpg">
@@ -139,7 +139,7 @@
 					<div class="upArrow">
 						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScoreDiv">75</div>
+					<div class="questionScoreDiv">25</div>
 					<div class="downArrow">
 
 						<img class="downArrowImg" src="public/img/downArrow.jpg">
@@ -160,7 +160,7 @@
 					<div class="upArrow">
 						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScoreDiv">75</div>
+					<div class="questionScoreDiv">19</div>
 					<div class="downArrow">
 
 						<img class="downArrowImg" src="public/img/downArrow.jpg">
@@ -181,7 +181,7 @@
 					<div class="upArrow">
 						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScoreDiv">75</div>
+					<div class="questionScoreDiv">18</div>
 					<div class="downArrow">
 
 						<img class="downArrowImg" src="public/img/downArrow.jpg">
@@ -202,7 +202,7 @@
 					<div class="upArrow">
 						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScoreDiv">75</div>
+					<div class="questionScoreDiv">15</div>
 					<div class="downArrow">
 
 						<img class="downArrowImg" src="public/img/downArrow.jpg">
@@ -223,7 +223,7 @@
 					<div class="upArrow">
 						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScoreDiv">75</div>
+					<div class="questionScoreDiv">11</div>
 					<div class="downArrow">
 
 						<img class="downArrowImg" src="public/img/downArrow.jpg">
@@ -243,7 +243,7 @@
 					<div class="upArrow">
 						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScoreDiv">75</div>
+					<div class="questionScoreDiv">10</div>
 					<div class="downArrow">
 
 						<img class="downArrowImg" src="public/img/downArrow.jpg">
@@ -263,7 +263,7 @@
 					<div class="upArrow">
 						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScoreDiv">75</div>
+					<div class="questionScoreDiv">8</div>
 					<div class="downArrow">
 
 						<img class="downArrowImg" src="public/img/downArrow.jpg">
@@ -284,7 +284,7 @@
 					<div class="upArrow">
 						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScoreDiv">75</div>
+					<div class="questionScoreDiv">7</div>
 					<div class="downArrow">
 
 						<img class="downArrowImg" src="public/img/downArrow.jpg">
@@ -305,7 +305,7 @@
 					<div class="upArrow">
 						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScoreDiv">75</div>
+					<div class="questionScoreDiv">5</div>
 					<div class="downArrow">
 
 						<img class="downArrowImg" src="public/img/downArrow.jpg">
@@ -326,7 +326,7 @@
 					<div class="upArrow">
 						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScoreDiv">75</div>
+					<div class="questionScoreDiv">1</div>
 					<div class="downArrow">
 
 						<img class="downArrowImg" src="public/img/downArrow.jpg">
@@ -346,7 +346,7 @@
 					<div class="upArrow">
 						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScoreDiv">75</div>
+					<div class="questionScoreDiv">1</div>
 					<div class="downArrow">
 
 						<img class="downArrowImg" src="public/img/downArrow.jpg">
