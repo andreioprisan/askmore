@@ -77,6 +77,7 @@ class Eventc extends CI_Controller {
 			(isset($_SERVER['HTTPS_HOST']) && $_SERVER['HTTPS_HOST'] == "m.askmo.re")) {
 			$isMobile = true;
 		}
+		$isMobile = true;
 
 		$this->load->model('eventc_model');
 		$this->load->model('questionc_model');
@@ -90,15 +91,16 @@ class Eventc extends CI_Controller {
 				array('questions_count' => $questions_count)
 			);
 
-		$this->load->view('nav', $this->userdata);
-
 		if (!$isMobile) {
+			$this->load->view('nav', $this->userdata);
 			$this->load->view('event_main', $coreData);
+			$this->load->view('footer');
 		} else {
-			echo "mobile";
+			$this->load->view('mobileHeader');
+			$this->load->view('AskQuestions', $coreData);
+			$this->load->view('footer');
 		}
 
-		$this->load->view('footer');
 
 
 	}
