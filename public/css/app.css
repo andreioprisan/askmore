@@ -63,7 +63,7 @@ body {
 	float:left;}
 
 	.tinyLogoImg{height:20px;}
-	#sort{text-align:left; margin-left: 255px; font-size: small; color:#999;}
+	#sort{text-align:left; margin-left: 245px; font-size: small; color:999;}
 	.questionBlock{}
 	.questionBlock p{margin:0; }
 
@@ -94,8 +94,8 @@ body {
 
 
 	.gap{clear: both; width: 100%; padding-bottom: 85px}
-	#writeQuestion{width:350px;}
-	#authorInput{width:310px;}
+	#writeQuestion{width:300px;}
+	#authorInput{width:250px;}
 
 	.questionMeta{width:50px; padding-right: 10px; float:left;}
 	.topnav1{background:#fff; position:fixed;margin-top:0;width:100%;}
