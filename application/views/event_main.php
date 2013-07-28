@@ -6,8 +6,7 @@
       </small>
     </h1>
   </div>
-  	<?php if (isset($questions) && count($questions) != 0 ) { ?>
-
+  	<?php if (isset($questions) && $questions_count != 0 ) { ?>
     <table class="table">
       <thead>
         <tr>
@@ -29,7 +28,7 @@
 
     <?php } else { ?>
     <div class="alert alert-info">
-      Looks like there aren't any questions here at this time! Ask one via web, mobile, twitter, voice call or txt message.  
+      Oh noes! There aren't any questions here at this time! Ask one via web, mobile, twitter, voice call or txt message.  
     </div>
     <?php } ?>
 
