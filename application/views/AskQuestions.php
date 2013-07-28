@@ -15,10 +15,6 @@
 				var currentScore = parseInt($(this).next().text());
 				$(this).next().text(currentScore + 1);
 				$(this).next().next().find('.downArrowImg').attr("src", "http://askmorenow.com/public/img/downArrow.jpg") ;
-
-
-
-
 			});
 
 			$(".downArrow").click(function() {
