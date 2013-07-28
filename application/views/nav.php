@@ -13,18 +13,17 @@
       totalvotes = 1;
 
       $(".upArrowW").click(function() {
-        console.log("up");
-
-        if (totalvotes <= 0) {
+        if (totalvotes <= 0 || $(this).hasClass('disabled')) {
+          console.log(totalvotes);
           return;
         } 
 
+        console.log("up");
+
         $(this).css('color','lightgreen');
+        $(this).addClass('disabled');
 
         var currentScore = parseInt($(this).next().next().text());
-        console.log(currentScore);
-        console.log($(this).next().next());
-        
         $(this).next().next().text(currentScore + 1);
         
         qid = $(this).data("qid");
@@ -38,14 +37,17 @@
       });
 
       $(".downArrowW").click(function() {
-        if (totalvotes <= 0) {
+        if (totalvotes <= 0 || $(this).hasClass('disabled')) {
+          console.log(totalvotes);
           return;
         } 
 
-        $(this).css('color','lightred');
-        
+        console.log("down");
+
+        $(this).css('color','red');
         var currentScore = parseInt($(this).prev().prev().text());
         $(this).prev().prev().text(currentScore - 1);
+        $(this).addClass('disabled');
         
         qid = $(this).data("qid");
         if (qid != undefined) {
@@ -55,6 +57,7 @@
 
         totalvotes--;
       });
+      
       });  
   </script>
 </head>

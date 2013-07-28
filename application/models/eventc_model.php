@@ -99,6 +99,13 @@ class Eventc_model extends CI_Model
 		}		
 	}
 
+	function delete($eventid) {
+		$this->db->where(array('eventid' => $eventid));
+		$this->db->delete('events');
+		$loc = 'Location: /event/list';
+	    header($loc);
+	}
+
 	function update($table, $where, $data)
 	{
 		$this->db->where($where);
@@ -134,8 +141,4 @@ class Eventc_model extends CI_Model
 		$this->db->insert($table, $data);
 	}
 
-	function delete($table, $where) {
-		$this->db->where($where);
-		$this->db->delete($table);
-	}
 }

@@ -57,6 +57,11 @@ class Eventc extends CI_Controller {
 
 	}
 
+	public function delete($eventid) {
+		$this->load->model('eventc_model');
+		$this->eventc_model->delete($eventid);
+	}
+
 	public function edit() {
 		if (isset($_COOKIE['ask'])) {
 			$this->userdata = (array)json_decode(base64_decode($_COOKIE['ask']));
@@ -85,7 +90,7 @@ class Eventc extends CI_Controller {
 			(isset($_SERVER['HTTPS_HOST']) && $_SERVER['HTTPS_HOST'] == "m.askmo.re")) {
 			$isMobile = true;
 		}
-		//$isMobile = true;
+		$isMobile = true;
 
 		$this->load->model('eventc_model');
 		$this->load->model('questionc_model');

@@ -17,6 +17,7 @@
         <th>Phone #</th>
         <th>Starting</th>
         <th>Ending</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -28,6 +29,9 @@
         <td><?php echo $event->phone ?></td>
         <td><?php echo date('m/d/Y', strtotime($event->startdate)) ?></td>
         <td><?php echo date('m/d/Y', strtotime($event->enddate)) ?></td>
+        <td width="5%">
+          <a class="btn btn-danger btn-small pull-right" type="button" href="/event/delete/<?php echo $event->eventid ?>">Delete</a>
+        </td>
       </tr>
       <?php } ?>
     </tbody>

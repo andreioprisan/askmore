@@ -53,6 +53,7 @@ $route['event/list'] = "eventc/list_a";
 $route['event/edit'] = "eventc/edit";
 $route['event/create'] = "eventc/create";
 $route['event/create/save'] = "eventc/createnew";
+$route['event/delete/(:any)'] = "eventc/delete/$1";
 // mobile view
 $route['events'] = "events/index";
 

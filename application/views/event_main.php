@@ -26,8 +26,10 @@
                 $isModerator = true;
               } else {
                 $isModerator = false;
-              } ?>
-        <?php foreach($questions as $question) { ?>
+              } 
+              $questionnum = 0; ?>
+        <?php foreach($questions as $question) { 
+          $questionnum++;?>
         <tr>
           <td style="width: 5%; text-align: center;">
             <span data-qid="<?php echo $question->questionid ?>" class="icon-chevron-up upArrowW" style="color: gray; font-size: 20px;"></span><br>
@@ -44,6 +46,11 @@
           </td>
         </tr>
         <?php } ?>
+            <script>
+    $(document).ready(function(){
+      totalvotes = <?php echo $questionnum*2 ?>;
+    }); 
+    </script>
       </tbody>
     </table>
 
