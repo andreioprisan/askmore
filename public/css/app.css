@@ -4,6 +4,10 @@
 	background-image: none;
 }
 
+.container {
+	min-height: 500px;
+}
+
 .input-prepend {
 	padding: 10px 10px 10px 10px;
 }

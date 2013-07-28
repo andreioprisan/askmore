@@ -1,9 +1,7 @@
 
 
 <div class="bs-old-docs">
-  <div class="container">
-  	© AskMoreNow 2013
-  </div>
+  	© AskMore 2013
 </div>
 
 </html>
