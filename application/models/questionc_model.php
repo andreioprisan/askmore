@@ -11,6 +11,10 @@ class Questionc_model extends CI_Model
 
 	public function saveNew($eventid, $content, $source, $author)
 	{
+		if ($author == "Your name [optional]" || $author == "Your name" || trim($author) == "") {
+			$author = "anonymous";
+		}
+		
 		$question = array(
 			'eventid' => $eventid,
 			'text'	=> $content,
