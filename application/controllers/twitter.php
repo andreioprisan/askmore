@@ -17,7 +17,8 @@ class Twitter extends CI_Controller {
 		foreach($hashtags->result() as $hashset) {
 			$hashtags_count++;
 	        $this->twitterlib->searchone(null, array($hashset->hashtag));
-			$hashtags = $this->CI->db->query("DELETE FROM tweets WHERE (text not like '%askmore%' and terms = '".$hashset->hashtag."') or processed=1");
+//			$hashtags = $this->CI->db->query("DELETE FROM tweets WHERE (text not like '%askmore%' and terms = '".$hashset->hashtag."') or processed=1");
+			$hashtags = $this->CI->db->query("DELETE FROM tweets WHERE text not like '%askmore%' and terms = '".$hashset->hashtag."'");
 		}
 
 		echo "Saved ".$hashtags_count." twitter hashtags";
