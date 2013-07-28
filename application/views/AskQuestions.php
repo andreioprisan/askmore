@@ -1,57 +1,4 @@
 <body>
-
-
-
-	<script>
-		$(document).ready(function(){
-			var totalvotes = 1;
-			$("#writeQuestion").click(function(){
-				$(".addAuthor").show();
-				$(".gap").css("padding-bottom", "125px");
-			});
-
-			$(".upArrow").click(function() {
-				if (totalvotes <= 0) {
-					return;
-				} 
-
-				$(this).find('.upArrowImg').attr("src", "http://askmo.re/public/img/upArrow_active.jpg") ;
-				var currentScore = parseInt($(this).next().text());
-				$(this).next().text(currentScore + 1);
-				$(this).next().next().find('.downArrowImg').attr("src", "http://askmo.re/public/img/downArrow.jpg") ;
-				
-				qid = $(this).data("qid");
-				if (qid != undefined) {
-					$.post('/question/'+qid+'/upvote', function(data) {
-					});
-				}
-
-
-				totalvotes--;
-			});
-
-			$(".downArrow").click(function() {
-				if (totalvotes <= 0) {
-					return;
-				} 
-
-				$(this).find('.downArrowImg').attr("src", "http://askmo.re/public/img/downArrow_active.jpg") ;
-				var currentScore = parseInt($(this).prev().text());
-				$(this).prev().text(currentScore - 1);
-				$(this).prev().prev().find('.upArrowImg').attr("src", "http://askmo.re/public/img/upArrow.jpg") ;
-				
-				qid = $(this).data("qid");
-				if (qid != undefined) {
-					$.post('/question/'+qid+'/downvote', function(data) {
-					});
-				}
-
-				totalvotes--;
-			});
-		});
-	</script>
-
-
 	<div class="iphoneEmulator">
 		<div class="topnav1">
 			<div class="headerControl">
@@ -72,7 +19,8 @@
 				</form>
 			</div>
 		</div>
-		<hr>
+		<div class="gap"></div>
+
 	  	<?php if (isset($questions) && $questions_count != 0 ) { 
 	  		$questionnum = 0;?>
 	        <?php foreach($questions as $question) { 
@@ -81,14 +29,10 @@
 				<div class="questionBlock">
 					<div class="questionMeta">
 						<div class="questionNo">&nbsp;<?php #echo $questionnum ?></div>
-						<div class="questionScoreDivDiv">
-							<div class="upArrow" data-qid="<?php echo $question->questionid ?>">
-								<img class="upArrowImg" src="public/img/upArrow.jpg">
-							</div>
-							<div class="questionScoreDiv"><?php echo $question->score ?></div>
-							<div class="downArrow" data-qid="<?php echo $question->questionid ?>">
-								<img class="downArrowImg" src="public/img/downArrow.jpg">
-							</div>
+						<div class="questionScoreDivDiv" style="text-align: center;">
+				            <span data-qid="<?php echo $question->questionid ?>" class="icon-chevron-up upArrowW" style="color: gray; font-size: 20px;"></span><br>
+				            <span style="font-weight: bold;"><?php echo $question->score ?></span><br>
+				            <i data-qid="<?php echo $question->questionid ?>" class="icon-chevron-down downArrowW"  style="color: gray; font-size: 20px;"></i>
 						</div>
 					</div>
 					<div class="userQuestion">
@@ -97,7 +41,15 @@
 					</div>
 				</div>
 				<div class="borderBottom"></div>
+			<!--<div class="gap"></div>-->
+
 	        <?php } ?>
+
+		<script>
+		$(document).ready(function(){
+			totalvotes = <?php echo $questionnum*2 ?>;
+		}); 
+		</script>
 	    <?php } else { ?>
 	    <div class="alert alert-info">
 	      Oh noes! There aren't any questions here at this time! Ask one via web, mobile, twitter, voice call or txt message.  

@@ -32,7 +32,7 @@
           <td style="width: 5%; text-align: center;">
             <span data-qid="<?php echo $question->questionid ?>" class="icon-chevron-up upArrowW" style="color: gray; font-size: 20px;"></span><br>
             <span style="font-weight: bold;"><?php echo $question->score ?></span><br>
-            <i  data-qid="<?php echo $question->questionid ?>" class="icon-chevron-down downArrowW"  style="color: gray; font-size: 20px;"></i>
+            <span data-qid="<?php echo $question->questionid ?>" class="icon-chevron-down downArrowW"  style="color: gray; font-size: 20px;"></span>
           </td>
           <td><?php echo $question->text ?><br>
               asked by <b><?php if ($question->author != null) { echo $question->author; } else { echo "anonymous"; } ?></b> via <b><?php echo $question->source ?></b> on  <b><?php echo date('m/d/Y H:i', strtotime($question->createdat)) ?></b>

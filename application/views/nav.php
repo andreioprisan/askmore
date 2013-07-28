@@ -10,7 +10,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  
   <script>
     $(document).ready(function(){
-      var totalvotes = 1;
+      totalvotes = 1;
 
       $(".upArrowW").click(function() {
         console.log("up");
@@ -19,7 +19,7 @@
           return;
         } 
 
-        $(this).css('color','green');
+        $(this).css('color','lightgreen');
 
         var currentScore = parseInt($(this).next().next().text());
         console.log(currentScore);
@@ -42,7 +42,7 @@
           return;
         } 
 
-        $(this).css('color','red');
+        $(this).css('color','lightred');
         
         var currentScore = parseInt($(this).prev().prev().text());
         $(this).prev().prev().text(currentScore - 1);

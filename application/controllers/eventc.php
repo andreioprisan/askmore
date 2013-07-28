@@ -83,7 +83,7 @@ class Eventc extends CI_Controller {
 			(isset($_SERVER['HTTPS_HOST']) && $_SERVER['HTTPS_HOST'] == "m.askmo.re")) {
 			$isMobile = true;
 		}
-		//$isMobile = true;
+		$isMobile = true;
 
 		$this->load->model('eventc_model');
 		$this->load->model('questionc_model');
