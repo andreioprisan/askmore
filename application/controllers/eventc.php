@@ -73,12 +73,10 @@ class Eventc extends CI_Controller {
 
 	public function lookup($slug) {
 		$isMobile = false;
-		if (gethostname() == "m.askmo.re") {
+		if ($_SERVER['HTTP_HOST'] == "m.askmo.re" ||
+			$_SERVER['HTTPS_HOST'] == "m.askmo.re") {
 			$isMobile = true;
 		}
-		var_dump($_SERVER);
-		echo gethostname();
-		
 
 		$this->load->model('eventc_model');
 		$this->load->model('questionc_model');
