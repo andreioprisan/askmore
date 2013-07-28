@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>AskMore</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
 	<link href="/public/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/public/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link href="/public/css/app.css" rel="stylesheet">
