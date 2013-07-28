@@ -35,6 +35,23 @@ class Eventc extends CI_Controller {
 
 	}
 
+	public function createnew() {
+		$this->load->model('eventc_model');
+
+		$input = $_POST;
+		$neededInputs = array('inputEventName', 'inputLocation', 'inputHashtag', 'inputStartDate', 'inputEndDate');
+		foreach($neededInputs as $neededInput) {
+			if (!array_key_exists($neededInput, $input) ||
+				empty($input[$neededInput])) {
+			    header('Location: /event/create?error=1');
+			    return;
+			}
+		}
+
+		$this->eventc_model->saveNew($input);
+		header('Location: /event/list');
+		
+	}
 
 	public function edit() {
 		if (isset($_COOKIE['ask'])) {
@@ -50,3 +67,4 @@ class Eventc extends CI_Controller {
 
 	}	
 }
+
