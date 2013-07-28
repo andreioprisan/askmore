@@ -64,8 +64,8 @@ $route['question/(:any)/downvote'] = "questionc/downvote/$1";
 $route['question/(:any)/delete/(:any)'] = "questionc/delete/$1/$2";
 
 // twitter
-$route['twitter/test'] = "twitter/index";
-$route['twitter/cron'] = "twitter/saveall";
+$route['twitter/crawl'] = "twitter/crawl";
+$route['twitter/sync'] = "twitter/sync";
 
 
 #twilio

@@ -220,7 +220,7 @@ class Twitterlib {
 			if( $cachetime == null )
 			{
 				$query=implode('+AND+',$this->terms);
-				$query_data = array('q' => $query, 'result_type' => 'recent', 'include_entities' => 'true','rpp' => 1,'result_type'=>'mixed');
+				$query_data = array('q' => $query, 'include_entities' => 'false','rpp' => 1, 'count' => 500, 'result_type'=>'mixed');
 				$url = 'https://api.twitter.com/1.1/search/tweets.json';
 				$content=$connection->get($url,$query_data);
 				// if we want to cache for an amount of time
@@ -259,9 +259,11 @@ class Twitterlib {
 	*/
 	public function process($data=null)
 	{
+		/*
 		if (strpos($data->text, "askmore") === false) {
 			return;
 		}
+		*/
 
 		$data2 = array(	'text' => $data->text,
 						'created_at' => date('Y-m-d H:i:s', strtotime($data->created_at)),
