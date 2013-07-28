@@ -12,7 +12,9 @@
       <input type="text" class="input-medium search-query span2" maxlength="20" name="author" placeholder="Your Name">
       <button type="submit" class="btn btn-primary">Ask Now!</button>
     </form>
-  	<?php if (isset($questions) && $questions_count != 0 ) { ?>
+  	<?php 
+    $questionnum = 0;
+    if (isset($questions) && $questions_count != 0 ) { ?>
     <table class="table">
       <thead>
         <tr>
