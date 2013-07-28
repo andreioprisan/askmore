@@ -38,17 +38,22 @@
 |
 */
 
+//homepage
 $route['default_controller'] = "welcome";
+
+//auth
 $route['login'] = "account/login";
 $route['signup'] = "account/signup";
 $route['signout'] = "account/signout";
 
+//web view
 $route['account/signup/save'] = "account/signup_save";
 $route['account/login/save'] = "account/login_save";
 $route['event/list'] = "eventc/list_a";
 $route['event/edit'] = "eventc/edit";
 $route['event/create'] = "eventc/create";
 $route['event/create/save'] = "eventc/createnew";
+// mobile view
 $route['events'] = "events/index";
 
 $route['question/create/save'] = "questionc/createnew";

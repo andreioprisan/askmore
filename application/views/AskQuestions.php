@@ -11,17 +11,17 @@
 			});
 
 			$(".upArrow").click(function() {
-				$(this).find('.upArrowImg').attr("src", "http://askmorenow.com/public/img/upArrow_active.jpg") ;
+				$(this).find('.upArrowImg').attr("src", "http://askmo.re/public/img/upArrow_active.jpg") ;
 				var currentScore = parseInt($(this).next().text());
 				$(this).next().text(currentScore + 1);
-				$(this).next().next().find('.downArrowImg').attr("src", "http://askmorenow.com/public/img/downArrow.jpg") ;
+				$(this).next().next().find('.downArrowImg').attr("src", "http://askmo.re/public/img/downArrow.jpg") ;
 			});
 
 			$(".downArrow").click(function() {
-				$(this).find('.downArrowImg').attr("src", "http://askmorenow.com/public/img/downArrow_active.jpg") ;
+				$(this).find('.downArrowImg').attr("src", "http://askmo.re/public/img/downArrow_active.jpg") ;
 				var currentScore = parseInt($(this).prev().text());
 				$(this).prev().text(currentScore - 1);
-				$(this).prev().prev().find('.upArrowImg').attr("src", "http://askmorenow.com/public/img/upArrow.jpg") ;
+				$(this).prev().prev().find('.upArrowImg').attr("src", "http://askmo.re/public/img/upArrow.jpg") ;
 
 			});
 		});

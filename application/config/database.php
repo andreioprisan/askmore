@@ -45,7 +45,7 @@
 | the active record class
 */
 
-if (gethostname() == "askmorenow.com") {
+if (gethostname() == "askmo.re") {
 	$active_group = 'prod';	
 } else {
 	$active_group = 'default';		
@@ -71,7 +71,7 @@ $db['default']['stricton'] = FALSE;
 $db['prod']['hostname'] = 'localhost';
 $db['prod']['username'] = 'root';
 $db['prod']['password'] = 'a2gn4vy2o87g3hwue';
-$db['prod']['database'] = 'askmorenow';
+$db['prod']['database'] = 'askmore';
 $db['prod']['dbdriver'] = 'mysql';
 $db['prod']['dbprefix'] = '';
 $db['prod']['pconnect'] = TRUE;

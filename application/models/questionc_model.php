@@ -8,6 +8,24 @@ class Questionc_model extends CI_Model
 		parent::__construct();
 	}
 
+
+	public function saveNew($data)
+	{
+		
+		$this->db->insert('events', 
+			array(	'name' => $data['inputEventName'],
+					'location' => $data['inputLocation'],
+					'description' => $data['inputDescription'],
+					'hashtag' => $data['inputHashtag'],
+					'startdate' => $data['inputStartDate'],
+					'enddate' => $data['inputEndDate'],
+					'moderatorid' => $userdata['userid'],
+					'phone' => $friendlyNumber,
+					'slug'	=> $slug));
+
+	}
+
+
 	public function getQuestionsById($eventid) {
 		$query = $this->db->get_where('questions', array('eventid' => $eventid));
 		$results = $query->result();

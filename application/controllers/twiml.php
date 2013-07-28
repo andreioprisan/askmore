@@ -12,7 +12,7 @@ class Twiml extends CI_Controller {
 		$a = '<?xml version="1.0" encoding="UTF-8"?>
 				<Response>
 				    <Say voice="woman">Please say your question after the tone.</Say>
-				    <Record maxLength="180" transcribe="true" transcribeCallback="https://askmorenow.com/twiml/transcribe" />
+				    <Record maxLength="180" transcribe="true" transcribeCallback="https://askmo.re/twiml/transcribe" />
 				</Response>';
 		echo $a;
 

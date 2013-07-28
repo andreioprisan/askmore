@@ -1,6 +1,5 @@
 
 <div class="bs-masthead">
-<?php var_dump($_COOKIE); ?>
   <div class="container">
     <h1>social question service</h1>
     <h2>We're making it easy to get the unanswered question to the event hosts. </h2>
