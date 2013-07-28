@@ -7,7 +7,7 @@
   </div>
 
 	<br><br>
-<?php if (isset($eventsList) && count($eventsList) != 0 ) { ?>
+<?php if (isset($eventsList) && count($eventsList) != 0 && $eventsList[0] != false) { ?>
 	<table class="table">
     <thead>
       <tr>
@@ -21,7 +21,9 @@
       </tr>
     </thead>
     <tbody>
-      <?php foreach($eventsList as $event) { ?>
+      <?php var_dump($eventsList);?>
+      <?php 
+      foreach($eventsList as $event) { ?>
       <tr>
         <td><a href="/<?php echo $event->slug ?>"><?php echo $event->name ?></a></td>
         <td><?php echo $event->location ?></td>
@@ -37,6 +39,9 @@
     </tbody>
   </table>
 <?php } else { ?>
+    <div class="alert alert-info">
+      Oh noes! There aren't any events here at this time! Create one with the button up top!
+    </div>
 
 <?php } ?>
 
