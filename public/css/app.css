@@ -56,7 +56,7 @@ body {
 	border-bottom: 1px solid #e5e5e5;
 }
 
-/*Mobile View CSS */
+/*Mobile View CSS old*/
 .iphoneEmulator{max-width:650px; margin: 0 auto; padding: 0}
 
 
@@ -104,6 +104,8 @@ body {
 
 	.questionMeta{width:50px; padding-right: 10px; float:left;}
 	.topnav1{background:#fff; position:fixed;margin-top:0;width:100%;}
+
+
 
 
 /*New CSS */

@@ -56,7 +56,7 @@
 		<div class="topnav1">
 			<div class="headerControl">
 				<div class="logoTiny"><img class="tinyLogoImg" src="/public/img/AskMoreLogo_tiny.png"></div>
-				<!--<div id="sort" class="">Sort: <a class="sortHref" href="#">Top</a> | <a href="#" class="sortHref">New</a></div>-->
+				<div id="sort" class="">Sort: <a class="sortHref" href="#">Top</a> | <a href="#" class="sortHref">New</a></div>
 			</div>
 			<br>
 			<div class="questonHeader">
@@ -72,6 +72,7 @@
 				</form>
 			</div>
 		</div>
+		<div class="gap"></div>
 		<hr>
 	  	<?php if (isset($questions) && $questions_count != 0 ) { 
 	  		$questionnum = 0;?>
