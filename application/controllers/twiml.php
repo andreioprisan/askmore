@@ -4,7 +4,6 @@ class Twiml extends CI_Controller {
 
 	public function index()
 	{
-		$this->login();
 	}
 
 	public function voice()
@@ -16,6 +15,8 @@ class Twiml extends CI_Controller {
 				    <Record maxLength="180" transcribe="true" transcribeCallback="https://askmorenow.com/twiml/transcribe" />
 				</Response>';
 		echo $a;
+		$this->db->insert('raw', $_POST); 
+
 	}
 
 	public function sms()
@@ -26,10 +27,12 @@ class Twiml extends CI_Controller {
 				    <Sms>Thank you for submitting your question!</Sms>
 				</Response>';
 		echo $a;
+		$this->db->insert('raw', $_POST); 
+
 	}
 
 	public function transcribe() {
-
+		$this->db->insert('raw', $_POST);
 	}
 
 
