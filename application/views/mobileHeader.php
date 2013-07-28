@@ -3,9 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>AskMore</title>
-<!--  <meta http-equiv="refresh" content="20">  -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />-->
+<!--  <meta http-equiv="refresh" content="20">-->
+  	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
 	<link href="/public/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/public/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link href="/public/css/app.css" rel="stylesheet">
