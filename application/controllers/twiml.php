@@ -15,7 +15,11 @@ class Twiml extends CI_Controller {
 				    <Record maxLength="180" transcribe="true" transcribeCallback="https://askmorenow.com/twiml/transcribe" />
 				</Response>';
 		echo $a;
-		$this->db->insert('raw', $_POST); 
+
+		if (isset($_POST) && count($_POST) != 0) {
+			$this->load->model('twiml_model');
+			$this->twiml_model->save($_POST);
+		}
 
 	}
 
@@ -27,12 +31,19 @@ class Twiml extends CI_Controller {
 				    <Sms>Thank you for submitting your question!</Sms>
 				</Response>';
 		echo $a;
-		$this->db->insert('raw', $_POST); 
+
+		if (isset($_POST) && count($_POST) != 0) {
+			$this->load->model('twiml_model');
+			$this->twiml_model->save($_POST);
+		}
 
 	}
 
 	public function transcribe() {
-		$this->db->insert('raw', $_POST);
+		if (isset($_POST) && count($_POST) != 0) {
+			$this->load->model('twiml_model');
+			$this->twiml_model->save($_POST);
+		}
 	}
 
 
