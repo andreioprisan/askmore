@@ -17,6 +17,11 @@ class Questionc extends CI_Controller {
 		$this->questionc_model->downvote($questionid);
 	}
 	
+	public function delete($questionid, $slug) {
+		$this->load->model('questionc_model');
+		$this->questionc_model->delete($questionid, $slug);
+	}
+
 	public function createnew() {
 		$this->load->model('questionc_model');
 

@@ -124,9 +124,11 @@ class Questionc_model extends CI_Model
 		$this->db->insert($table, $data);
 	}
 
-	function delete($table, $where) {
-		$this->db->where($where);
-		$this->db->delete($table);
+	function delete($questionid, $slug) {
+		$this->db->where(array('questionid' => $questionid));
+		$this->db->delete('questions');
+		$loc = 'Location: /'.$slug;
+	    header($loc);
 	}
 
 	function get_rewards($uid = null, $page = 0, $cycle = null) {

@@ -56,9 +56,11 @@ $route['event/create/save'] = "eventc/createnew";
 // mobile view
 $route['events'] = "events/index";
 
+// questions
 $route['question/create/save'] = "questionc/createnew";
 $route['question/(:any)/upvote'] = "questionc/upvote/$1";
 $route['question/(:any)/downvote'] = "questionc/downvote/$1";
+$route['question/(:any)/delete/(:any)'] = "questionc/delete/$1/$2";
 
 #twilio
 $route['twiml/sms'] = "twiml/sms";

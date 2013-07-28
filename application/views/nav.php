@@ -5,7 +5,58 @@
 	<title>AskMore</title>
 	<link href="/public/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/public/css/bootstrap-responsive.min.css" rel="stylesheet">
+  <link href="/public/css/font-awesome.min.css" rel="stylesheet">
   <link href="/public/css/app.css" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  
+  <script>
+    $(document).ready(function(){
+      var totalvotes = 1;
+
+      $(".upArrowW").click(function() {
+        console.log("up");
+
+        if (totalvotes <= 0) {
+          return;
+        } 
+
+        $(this).css('color','green');
+
+        var currentScore = parseInt($(this).next().next().text());
+        console.log(currentScore);
+        console.log($(this).next().next());
+        
+        $(this).next().next().text(currentScore + 1);
+        
+        qid = $(this).data("qid");
+        if (qid != undefined) {
+          $.post('/question/'+qid+'/upvote', function(data) {
+          });
+        }
+
+
+        totalvotes--;
+      });
+
+      $(".downArrowW").click(function() {
+        if (totalvotes <= 0) {
+          return;
+        } 
+
+        $(this).css('color','red');
+        
+        var currentScore = parseInt($(this).prev().prev().text());
+        $(this).prev().prev().text(currentScore - 1);
+        
+        qid = $(this).data("qid");
+        if (qid != undefined) {
+          $.post('/question/'+qid+'/downvote', function(data) {
+          });
+        }
+
+        totalvotes--;
+      });
+      });  
+  </script>
 </head>
 
 <html>
@@ -16,6 +67,10 @@
 
       <?php if (isset($userid) && isset($password) && $userid != 0 && $password != null) { ?>
       <ul class="nav pull-right">
+        <li class="">
+          <a href="/event/list">Events</a>
+        </li>
+
         <li class="">
           <a href="/home">Hi, <?php echo $name ?></a>
         </li>

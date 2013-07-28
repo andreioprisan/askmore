@@ -1,5 +1,4 @@
 <div class="container">
-
   <div class="page-header">
     <h1><?php echo $event['name'] ?> <small><font color="black">#<?php echo $event['hashtag'] ?></font> 
       <span class="pull-right"><?php echo $event['location'] ?> <span class="label label-important" style="font-size: 18px; font-weight:100;"><?php echo $event['phone'] ?></span></span>
@@ -13,7 +12,6 @@
       <input type="text" class="input-medium search-query span2" maxlength="20" name="author" placeholder="Your Name">
       <button type="submit" class="btn btn-primary">Ask Now!</button>
     </form>
-    <hr>
   	<?php if (isset($questions) && $questions_count != 0 ) { ?>
     <table class="table">
       <thead>
@@ -23,12 +21,27 @@
         </tr>
       </thead>
       <tbody>
+        <?php if (count($userdata) > 0 && isset($userdata['userid']) &&
+              $userdata['userid'] == $event['moderatorid']) { 
+                $isModerator = true;
+              } else {
+                $isModerator = false;
+              } ?>
         <?php foreach($questions as $question) { ?>
         <tr>
-          <td style="width: 5%"><?php echo $question->score ?></td>
+          <td style="width: 5%; text-align: center;">
+            <span data-qid="<?php echo $question->questionid ?>" class="icon-chevron-up upArrowW" style="color: gray; font-size: 20px;"></span><br>
+            <span style="font-weight: bold;"><?php echo $question->score ?></span><br>
+            <i  data-qid="<?php echo $question->questionid ?>" class="icon-chevron-down downArrowW"  style="color: gray; font-size: 20px;"></i>
+          </td>
           <td><?php echo $question->text ?><br>
               asked by <b><?php echo $question->author ?></b> via <b><?php echo $question->source ?></b> on  <b><?php echo date('m/d/Y H:i', strtotime($question->createdat)) ?></b>
-              </td>
+          </td>
+          <td style="width: 5%">
+            <?php if ($isModerator) { ?>
+              <a href="/question/<?php echo $question->questionid ?>/delete/<?php echo $event['slug'] ?>" class="btn btn-danger">Delete</a>
+            <?php } ?>
+          </td>
         </tr>
         <?php } ?>
       </tbody>

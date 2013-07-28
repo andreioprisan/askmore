@@ -72,6 +72,12 @@ class Eventc extends CI_Controller {
 	}	
 
 	public function lookup($slug) {
+		if (isset($_COOKIE['ask'])) {
+			$this->userdata = (array)json_decode(base64_decode($_COOKIE['ask']));
+		} else {
+			$this->userdata = array();
+		}
+
 		$isMobile = false;
 		if ((isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] == "m.askmo.re") ||
 			(isset($_SERVER['HTTPS_HOST']) && $_SERVER['HTTPS_HOST'] == "m.askmo.re")) {
@@ -88,7 +94,8 @@ class Eventc extends CI_Controller {
 		$coreData = 			array_merge(
 				array('event'=>(array)json_decode(json_encode($event_details))), 
 				array('questions' => $questions_details),
-				array('questions_count' => $questions_count)
+				array('questions_count' => $questions_count),
+				array('userdata' => $this->userdata)
 			);
 
 		if (!$isMobile) {
