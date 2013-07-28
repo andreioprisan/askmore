@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>AskMore</title>
+	<title>AskMore - AskBetter</title>
+  <meta name="description" content="AskMore is a webapp that allows you to ask questions during live events via web, sms, twitter and email. Whether you are in attendance or not able to attend an event, your questions will reach the event even when you couldn't. Ask More - Ask Better.">
 	<link href="/public/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/public/css/bootstrap-responsive.min.css" rel="stylesheet">
   <link href="/public/css/font-awesome.min.css" rel="stylesheet">
@@ -84,7 +85,16 @@
       <?php } else { ?>
       <ul class="nav pull-right">
         <li>
-          <a href="/plans">Plans</a>
+          <a href="/#howitworks">How it works</a>
+        </li>
+        <li>
+          <a href="/#liveevents">Live Events</a>
+        </li>
+        <li>
+          <a href="/#testimonials">Testimonials</a>
+        </li>
+        <li>
+          <a href="/#plans">Plans</a>
         </li>
         <li class="">
           <a href="/login">Login</a>
