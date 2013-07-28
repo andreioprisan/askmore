@@ -99,18 +99,18 @@
 
       			<div class="container1">
 
-      				<div class="row margintop20">
+      				<div class="row margintop20 span15">
 
-      					<div class="span4">
+      					<div class="span5">
       						<h2><i class="icon-briefcase"></i> AskMore</h2>
       						<p> Don't be afraid to speak up. <br />Ask questions via twitter SMS, web, or mobile to ensure you are always heard. </p>
       					</div><!-- /span4 -->
-      					<div class="span4">
+      					<div class="span5">
       						<h2><i class="icon-bullhorn"></i> AskBetter</h2>
       						<p>Use our crowd-source techonolgy to let the audience rank questions by importance. <br /> Let you audience decide what questions they want answered.</p>
 
       					</div><!-- /span4 -->
-      					<div class="span4">
+      					<div class="span5">
       						<h2><i class="icon-bar-chart"></i> AskNow</h2>
       						<p>Send in your questions live during the event, before the event or after the speaker has opened for questions. </p>
 
@@ -183,7 +183,7 @@
       				<div class="row center">
 
 
-      					<div class="span4 margintop20">
+      					<div class="span4 margintop20 ">
       						<div class="row left">
       							<div class="span1">
       								<i class="icon-phone support-icon color1"></i>
@@ -198,7 +198,7 @@
       							</div>
       						</div>
       					</div>
-      					<div class="span4 margintop20">
+      					<div class=" margintop20 span5">
       						<div class="row left">
       							<div class="span1"><i class="icon-comments support-icon color2"></i></div>
       							<div class="span3">
@@ -210,10 +210,10 @@
       								</ul></div>
       							</div>
       						</div>
-      						<div class="span4 margintop20">
+      						<div class=" margintop20 span5">
       							<div class="row left">
       								<div class="span1"><i class="icon-group support-icon color3"></i></div>
-      								<div class="span3">
+      								<div class="span4">
       									<h2>Crowd Sourced</h2>
       									<ul class="unstyled">
       											<li><i class="icon-ok"></i> Vote up or down questions to rank</li>
@@ -289,7 +289,7 @@
 
       						</div>
 
-      						<div class="row" id="portfolio-container1">
+      						<div class="row" id="portfolio-container1" style="padding-left: 100px;">
       							<div class="span3 project art">
 
       								<img src="public/images/bdnmainewhatsnext.png" alt="" class="project-img">
@@ -318,7 +318,7 @@
       								<div class="cnt">
       									<h5>SW Weekend</h5>
 
-      									<a href="f195" class="fancybox-media btn btn-normal" >Enter</a>
+      									<a href="/f195" class="fancybox-media btn btn-normal" >Enter</a>
       								</div>
 
 
@@ -375,11 +375,11 @@
 
       						</div>
       						<div class="container1">
-      							<div class="row center margintop40">
+      							<div class="row center margintop40 span14">
 
       								
 
-      								<div id="carousel_vertical_testimonial" class="span4 carousel slide vertical">
+      								<div id="carousel_vertical_testimonial" class="span7 carousel slide vertical">
       									<div class="carousel-inner">
       										<div class="item testimonial active">
 
@@ -397,7 +397,7 @@
 
 
       								</div>
-      								<div  class="span4">
+      								<div  class="span7">
 
       									<div class="item  testimonial active">
       											<img src="public/images/lemiuex.jpg">
@@ -426,13 +426,13 @@
       					<!--################ NEWS SECTION START ################-->
 <a name="plans"></a> 
       					<section id="news" class="paddingbottom40" >
-      						<div class="container1" style="margin:0 auto;">
+      						<div class="container1" style="margin:0 auto; margin-left: 50px;">
 
       							
 
       							<hr class="line">
       							<div class="row">
-      								<div class="span12 center">
+      								<div class="span15 center">
       									<h1 class="big-heading">Pricing</h1>
       									<h4 class="sub-heading">Choose from our 3 packages</h4>
 
@@ -443,7 +443,7 @@
 
       							</div>
       							<div class="row" id="pricing">
-      								<div class="span3">
+      								<div class="span5">
       									<div class="price-plan price-plan-business">
       										<h2>FREE</h2>
 
@@ -466,7 +466,7 @@
       									</div>
       								</div>
 
-      								<div class="span3">
+      								<div class="span5">
       									<div class="price-plan ">
       										<h2>Starter</h2>
 
@@ -494,7 +494,7 @@
 
       									</div>
       								</div>
-      								<div class="span3">
+      								<div class="span5">
       									<div class="price-plan price-plan-business">
       										<h2>EXECUTIVE</h2>
 
