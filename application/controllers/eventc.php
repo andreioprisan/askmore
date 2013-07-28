@@ -98,7 +98,7 @@ class Eventc extends CI_Controller {
 		} else {
 			$this->load->view('mobileHeader');
 			$this->load->view('AskQuestions', $coreData);
-			$this->load->view('footer');
+			//$this->load->view('footer');
 		}
 
 

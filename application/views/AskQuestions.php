@@ -67,7 +67,7 @@
 
 				<div class="questionBlock">
 					<div class="questionMeta">
-						<div class="questionNo"><?php echo $questionnum ?></div>
+						<div class="questionNo">&nbsp;<?php #echo $questionnum ?></div>
 						<div class="questionScoreDivDiv">
 							<div class="upArrow">
 								<img class="upArrowImg" src="public/img/upArrow.jpg">
