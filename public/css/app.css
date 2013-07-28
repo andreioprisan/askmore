@@ -5,9 +5,9 @@
 }
 
 .navbar .nav.pull-right {
-font-size: 150%;
-font-weight: 200;
-margin-top:2px;
+	font-size: 150%;
+	font-weight: 200;
+	margin-top:2px;
 }
 
 .bs-masthead {
@@ -49,31 +49,47 @@ body {
 }
 
 /*Mobile View CSS */
-.iphoneEmulator{width:640px; height:960px; margin: 0 auto; border: 3px black solid;padding:20px;}
+/*.iphoneEmulator{width:640px; height:960px; margin: 0 auto; border: 3px black solid;padding:20px;}
+*/
+
 .questionHeader{}
 .addAuthor{display:none;}
-.headerControl{background: #ddd; text-align: center;}
-.logoTiny{width: 100px; height:18px;
+.headerControl{padding:10px;text-align: center;}
+.logoTiny{width: 100px; height:20px;
 	float:left;}
 
-	.tinyLogoImg{height:18px;}
+	.tinyLogoImg{height:20px;}
 
 	.questionBlock{}
+	.questionBlock p{margin:0; }
 
 	.borderBottom{
 		width: 100%;
 		height: 2px;
 		background: url(../img/line-sep.jpg) repeat-x;
+		clear: both;
 	}
 
-	.questionMeta{width:50px; padding-right: 20px; float:left; height: 60px}
-	.questionNo{vertical-align: middle; color: #c6c6c6; font-family: Arial; font-size: medium; line-height: 60px; width: 20px; float: left;}
+	
+	.questionNo{vertical-align: middle; color: #c6c6c6; font-family: Arial; font-size: medium; line-height: 60px; width: 20px; float: left; text-align: center;}
 	.questionScore{color:#c6c6c6; font-weight: bold; font-size: small; text-align: center;}
 	.upArrow{}
 
+	.upArrowImg, .downArrowImg{height:20px; width:30px;}
 
 
 	.questionScore{}
 	.downArrow{}
-	.userQuestion{}
+
+
+	.userQuestion{float:left; width:80%;}
 	.userName{font-weight: bold;}
+
+
+.clearD{clear: both;}
+
+.questionMeta{width:20%; float:left;}
+
+
+
+
