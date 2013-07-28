@@ -53,8 +53,8 @@ body {
 }
 
 /*Mobile View CSS */
-/*.iphoneEmulator{width:640px; height:960px; margin: 0 auto; border: 3px black solid;padding:20px;}
-*/
+.iphoneEmulator{max-width:650px; margin: 0 auto; padding: 0}
+
 
 .questionHeader{}
 .addAuthor{display:none;}
@@ -68,16 +68,17 @@ body {
 	.questionBlock p{margin:0; }
 
 	.borderBottom{
-		width: 100%;
+		width: 90%;
+		max-width: 500px;
 		height: 2px;
 		background: url(../img/line-sep.jpg) repeat-x;
 		clear: both;
-		padding-bottom: 10px;
+		padding-bottom: 7px;
 	}
 
 	
 	.questionNo{vertical-align: middle; color: #c6c6c6; font-family: Arial; font-size: medium; line-height: 60px; width: 20px; float: left; text-align: center;}
-	.questionScore{color:#c6c6c6; font-weight: bold; font-size: small; text-align: center;}
+	.questionScoreDiv{color:#c6c6c6; font-weight: bold; font-size: small; text-align: center;}
 	.upArrow{}
 
 	.upArrowImg, .downArrowImg{height:20px; width:30px;}
@@ -89,7 +90,7 @@ body {
 
 	.userQuestion{float:left; width:80%;}
 	
-	.userName{font-weight: bold;}
+	.userName{font-weight: bold; padding-bottom: 5px}
 	.submitButton{margin-bottom:5px;}
 
 

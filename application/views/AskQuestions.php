@@ -9,6 +9,27 @@
 				$(".addAuthor").show();
 				$(".gap").css("padding-bottom", "125px");
 			});
+
+			$(".upArrow").click(function() {
+				$(this).find('.upArrowImg').attr("src", "http://askmorenow.com/public/img/upArrow_active.jpg") ;
+				var currentScore = parseInt($(this).next().text());
+				$(this).next().text(currentScore + 1);
+				$(this).next().next().find('.downArrowImg').attr("src", "http://askmorenow.com/public/img/downArrow.jpg") ;
+
+
+
+
+			});
+
+			$(".downArrow").click(function() {
+				$(this).find('.downArrowImg').attr("src", "http://askmorenow.com/public/img/downArrow_active.jpg") ;
+				var currentScore = parseInt($(this).prev().text());
+				$(this).prev().text(currentScore - 1);
+				$(this).prev().prev().find('.upArrowImg').attr("src", "http://askmorenow.com/public/img/upArrow.jpg") ;
+
+
+
+			});
 		});
 	</script>
 
@@ -16,7 +37,7 @@
 	<div class="iphoneEmulator">
 		<div class="topnav1">
 			<div class="headerControl">
-				<div class="logoTiny"><img class="tinyLogoImg" src="../../public/img/AskMoreLogo_tiny.jpg"></div>
+				<div class="logoTiny"><img class="tinyLogoImg" src="public/img/AskMoreLogo_tiny.jpg"></div>
 				<div id="sort">Sort: <a class="sortHref" href="#">Top</a> | <a href="#" class="sortHref">New</a></div>
 			</div>
 			<div class="questonHeader">
@@ -38,14 +59,13 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">1</div>
-				<div class="questionScore">
+				<div class="questionScoreDivDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
-
-						<img class="downArrowImg" src="../../public/img/downArrow.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
@@ -59,14 +79,14 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">2</div>
-				<div class="questionScore">
+				<div class="questionScoreDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow_active.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
 
-						<img class="downArrowImg" src="../../public/img/downArrow.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
@@ -80,14 +100,14 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">3</div>
-				<div class="questionScore">
+				<div class="questionScoreDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
 
-						<img class="downArrowImg" src="../../public/img/downArrow_active.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
@@ -101,14 +121,14 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">4</div>
-				<div class="questionScore">
+				<div class="questionScoreDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow_active.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
 
-						<img class="downArrowImg" src="../../public/img/downArrow.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
@@ -121,14 +141,14 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">5</div>
-				<div class="questionScore">
+				<div class="questionScoreDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow_active.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
 
-						<img class="downArrowImg" src="../../public/img/downArrow.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
@@ -142,14 +162,14 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">1</div>
-				<div class="questionScore">
+				<div class="questionScoreDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
 
-						<img class="downArrowImg" src="../../public/img/downArrow.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
@@ -163,14 +183,14 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">2</div>
-				<div class="questionScore">
+				<div class="questionScoreDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow_active.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
 
-						<img class="downArrowImg" src="../../public/img/downArrow.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
@@ -184,14 +204,14 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">3</div>
-				<div class="questionScore">
+				<div class="questionScoreDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
 
-						<img class="downArrowImg" src="../../public/img/downArrow_active.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
@@ -205,14 +225,14 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">4</div>
-				<div class="questionScore">
+				<div class="questionScoreDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow_active.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
 
-						<img class="downArrowImg" src="../../public/img/downArrow.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
@@ -225,14 +245,14 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">5</div>
-				<div class="questionScore">
+				<div class="questionScoreDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow_active.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
 
-						<img class="downArrowImg" src="../../public/img/downArrow.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
@@ -245,14 +265,14 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">1</div>
-				<div class="questionScore">
+				<div class="questionScoreDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
 
-						<img class="downArrowImg" src="../../public/img/downArrow.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
@@ -266,14 +286,14 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">2</div>
-				<div class="questionScore">
+				<div class="questionScoreDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow_active.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
 
-						<img class="downArrowImg" src="../../public/img/downArrow.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
@@ -287,14 +307,14 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">3</div>
-				<div class="questionScore">
+				<div class="questionScoreDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
 
-						<img class="downArrowImg" src="../../public/img/downArrow_active.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
@@ -308,14 +328,14 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">4</div>
-				<div class="questionScore">
+				<div class="questionScoreDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow_active.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
 
-						<img class="downArrowImg" src="../../public/img/downArrow.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
@@ -328,14 +348,14 @@
 		<div class="questionBlock">
 			<div class="questionMeta">
 				<div class="questionNo">5</div>
-				<div class="questionScore">
+				<div class="questionScoreDiv">
 					<div class="upArrow">
-						<img class="upArrowImg" src="../../public/img/upArrow_active.jpg">
+						<img class="upArrowImg" src="public/img/upArrow.jpg">
 					</div>
-					<div class="questionScore">75</div>
+					<div class="questionScoreDiv">75</div>
 					<div class="downArrow">
 
-						<img class="downArrowImg" src="../../public/img/downArrow.jpg">
+						<img class="downArrowImg" src="public/img/downArrow.jpg">
 					</div>
 				</div>
 			</div>
