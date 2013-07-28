@@ -9,6 +9,9 @@
   <link href="/public/css/app.css" rel="stylesheet">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  
   <script src="/public/js/app.js"></script>
+  <script src="/public/js/moment.min.js"></script>
+  <script src="/public/js/lodash.min.js"></script>
+  
 </head>
 <body>
 <div class="navbar">

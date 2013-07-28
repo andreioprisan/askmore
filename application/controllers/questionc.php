@@ -7,6 +7,14 @@ class Questionc extends CI_Controller {
 
 	}
 
+	public function getupdatedsince($timestamp, $eventid)
+	{
+		$this->load->model('questionc_model');
+		$results = $this->questionc_model->getupdatedsince($timestamp, $eventid);
+		header('Content-Type: application/json');
+		echo json_encode($results);
+	}
+
 	public function upvote($questionid) {
 		$this->load->model('questionc_model');
 		$this->questionc_model->upvote($questionid);

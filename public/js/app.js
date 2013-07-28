@@ -47,4 +47,6 @@ $(document).ready(function(){
 
     totalvotes--;
   });
+
+  lastupdated = moment().unix();
 });

@@ -20,7 +20,7 @@
           <th></th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="mainList">
         <?php if (count($userdata) > 0 && isset($userdata['userid']) &&
               $userdata['userid'] == $event['moderatorid']) { 
                 $isModerator = true;
@@ -31,9 +31,9 @@
         <?php foreach($questions as $question) { 
           $questionnum++;?>
         <tr>
-          <td style="width: 5%; text-align: center;">
+          <td style="width: 5%; text-align: center;" id="<?php echo $question->questionid ?>">
             <span data-qid="<?php echo $question->questionid ?>" class="icon-chevron-up upArrowW" style="color: gray; font-size: 20px;"></span><br>
-            <span style="font-weight: bold;"><?php echo $question->score ?></span><br>
+            <span class="questionScore" style="font-weight: bold;"><?php echo $question->score ?></span><br>
             <span data-qid="<?php echo $question->questionid ?>" class="icon-chevron-down downArrowW"  style="color: gray; font-size: 20px;"></span>
           </td>
           <td><?php echo $question->text ?><br>
@@ -60,5 +60,50 @@
     </div>
     <?php } ?>
 
+<?php if ($questionnum > 0) { ?>
 
+<script>
+window.setInterval(function(){
+
+  $.get('/question/updatedsince/'+lastupdated+'/<?php echo $event['eventid'] ?>">', function(data) {
+    if (_.size(data.updates) > 0) {
+      _.each(data.updates, function(item) {
+        $('#'+item.q+' .questionScore').fadeOut();
+        $('#'+item.q+' .questionScore').text(item.score);
+        $('#'+item.q+' .questionScore').fadeIn();
+      });
+    } 
+
+    if (_.size(data.new) > 0) {
+      _.each(data.new, function(item) {
+        if (_.size($('#'+item.questionid)) == 0) {
+          var newdom = '<tr>\
+              <td style="width: 5%; text-align: center; display:none" id="'+item.questionid+'">\
+                <span data-qid="'+item.questionid+'" class="icon-chevron-up upArrowW" style="color: gray; font-size: 20px;"></span><br>\
+                <span class="questionScore" style="font-weight: bold; display: inline;">'+item.questionid+'</span><br>\
+                <span data-qid="'+item.questionid+'" class="icon-chevron-down downArrowW" style="color: gray; font-size: 20px;"></span>\
+              </td>\
+              <td>'+item.text+'<br>\
+                  asked by <b>'+item.author+'</b> via <b>'+item.source+'</b> on  <b>'+item.createdat+'</b>\
+              </td>\
+              <td style="width: 5%">\
+              </td>\
+            </tr>';
+
+          $("#mainList tr:first").before(newdom);
+          $('#'+item.questionid).fadeIn();
+          $('#'+item.questionid).parent().fadeIn();
+        } else {
+          //return;
+        }
+      });
+    }
+
+    lastupdated = moment().unix()
+  });
+
+}, 5000);
+
+</script>
+<?php } ?>
 </div>

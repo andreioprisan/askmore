@@ -4,7 +4,7 @@
 
 		<div class="topnav1">
 			<div class="headerControl topnavfloatie" style="">
-				<div class="logoTiny"><img class="tinyLogoImg" src="/public/img/AskMoreLogo_tiny.png"></div>
+				<div class="logoTiny"><a href="/"><img class="tinyLogoImg" src="/public/img/AskMoreLogo_tiny.png"></a></div>
 				<div id="sort" class="">Sort: 
 					<?php
 					$sorts = array('top', 'new','both');
