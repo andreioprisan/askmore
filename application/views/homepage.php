@@ -500,7 +500,7 @@
 
       										<div class="price">
       											<div class="inside">
-      												<span class="super">$</span><span class="amt">ask</span>
+      												<span class="amt">ask</span>
       											</div>
       										</div>
       										<div class="most-popular">
