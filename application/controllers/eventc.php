@@ -76,6 +76,9 @@ class Eventc extends CI_Controller {
 		if (gethostname() == "m.askmo.re") {
 			$isMobile = true;
 		}
+		var_dump($_SERVER);
+		echo gethostname();
+		
 
 		$this->load->model('eventc_model');
 		$this->load->model('questionc_model');
@@ -90,8 +93,6 @@ class Eventc extends CI_Controller {
 			);
 
 		$this->load->view('nav', $this->userdata);
-
-		var_dump($agent);
 
 		if (!$isMobile) {
 			$this->load->view('event_main', $coreData);
