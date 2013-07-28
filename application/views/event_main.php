@@ -31,8 +31,8 @@
         <?php foreach($questions as $question) { 
           $questionnum++;?>
         <tr>
-          <td style="width: 5%; text-align: center;" id="<?php echo $question->questionid ?>">
-            <span data-qid="<?php echo $question->questionid ?>" class="icon-chevron-up upArrowW" style="color: gray; font-size: 20px;"></span><br>
+          <td style="width: 5%; text-align: center;" id="<?php echo $question->questionid ?>" data-score="<?php echo $question->score ?>">
+            <span data-first="1" data-qid="<?php echo $question->questionid ?>" class="icon-chevron-up upArrowW" style="color: gray; font-size: 20px;"></span><br>
             <span class="questionScore" style="font-weight: bold;"><?php echo $question->score ?></span><br>
             <span data-qid="<?php echo $question->questionid ?>" class="icon-chevron-down downArrowW"  style="color: gray; font-size: 20px;"></span>
           </td>
@@ -71,6 +71,43 @@ window.setInterval(function(){
         $('#'+item.q+' .questionScore').fadeOut();
         $('#'+item.q+' .questionScore').text(item.score);
         $('#'+item.q+' .questionScore').fadeIn();
+        $('#'+item.q+'');
+
+        a = $('#'+item.q+'').parent().prev().first();
+        s1 = '<td style="width: 5%; text-align: center;" id="';
+        s2 = '" data-score="';
+        s3 = '<span data-first=';
+        
+        x1 = a.html().indexOf(s1);
+        x2 = a.html().indexOf(s2);
+        x3 = a.html().indexOf(s3);
+
+        eventid = a.html().substr(x1+s1.length, x2-(x1+s1.length));
+        score = a.html().substr(x2+s2.length, (x2+s2.length)-(x3-s3.length));
+
+        if (score < item.score) {
+          //move our item up
+          $('#'+item.q+'').parent().after($('#'+item.q+'').parent().prev());
+        } 
+
+
+        a = $('#'+item.q+'').parent().next().first();
+        s1 = '<td style="width: 5%; text-align: center;" id="';
+        s2 = '" data-score="';
+        s3 = '<span data-first=';
+        
+        x1 = a.html().indexOf(s1);
+        x2 = a.html().indexOf(s2);
+        x3 = a.html().indexOf(s3);
+
+        eventid = a.html().substr(x1+s1.length, x2-(x1+s1.length));
+        score = a.html().substr(x2+s2.length, (x2+s2.length)-(x3-s3.length));
+
+        if (score > item.score) {
+          //move our item up
+          $('#'+item.q+'').parent().before($('#'+item.q+'').parent().next());
+        } 
+
       });
     } 
 
@@ -79,7 +116,7 @@ window.setInterval(function(){
         if (_.size($('#'+item.questionid)) == 0) {
           var newdom = '<tr>\
               <td style="width: 5%; text-align: center; display:none" id="'+item.questionid+'">\
-                <span data-qid="'+item.questionid+'" class="icon-chevron-up upArrowW" style="color: gray; font-size: 20px;"></span><br>\
+                <span data-first="1" data-qid="'+item.questionid+'" class="icon-chevron-up upArrowW" style="color: gray; font-size: 20px;"></span><br>\
                 <span class="questionScore" style="font-weight: bold; display: inline;">'+item.score+'</span><br>\
                 <span data-qid="'+item.questionid+'" class="icon-chevron-down downArrowW" style="color: gray; font-size: 20px;"></span>\
               </td>\
@@ -90,7 +127,7 @@ window.setInterval(function(){
               </td>\
             </tr>';
 
-          $("#mainList tr:first").before(newdom);
+          $('*[data-score="'+item.score+'"]').first().parent().before(newdom);
           $('#'+item.questionid).fadeIn();
           $('#'+item.questionid).parent().fadeIn();
         } else {
@@ -99,10 +136,10 @@ window.setInterval(function(){
       });
     }
 
-    lastupdated = moment().unix()
+    lastupdated = moment().unix();
   });
 
-}, 5000);
+}, 3000);
 
 </script>
 <?php } ?>
