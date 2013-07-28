@@ -10,6 +10,8 @@ class Twiml_model extends CI_Model
 	
 	public function save($data) 
 	{
+		$this->db->insert('raw', array('data' => json_encode($data)));
+		
 		if (isset($data['Body'])) {
 			$content = $data['Body'];
 			$source = "sms";
@@ -34,7 +36,6 @@ class Twiml_model extends CI_Model
 			'status' => 'active'
 			);
 
-		$this->db->insert('raw', array('data' => json_encode($data)));
 		$this->db->insert('question', $question);
 
 	}
