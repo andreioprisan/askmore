@@ -37,7 +37,7 @@ class Account extends CI_Controller {
 			$in = (array)$userDetails;
 			
 			setcookie('ask', base64_encode(json_encode($in)), time()+3600, '/', '.'.$_SERVER['SERVER_NAME']);
-			header('Location: /home');
+			header('Location: /event/list');
 		    return;
 		} else {
 		    header('Location: /login?error=2');
@@ -75,7 +75,12 @@ class Account extends CI_Controller {
 		}
 
 		$this->account_model->saveNew($input['inputFullName'], $input['inputEmail'], $input['inputPassword1']);
-	    header('Location: /');
+		$userDetails = $this->account_model->loginVerify($input['inputEmail'], $input['inputPassword1']);
+		$in = (array)$userDetails;
+			
+		setcookie('ask', base64_encode(json_encode($in)), time()+3600, '/', '.'.$_SERVER['SERVER_NAME']);
+		header('Location: /event/list');
+
 	    return;
 	}
 

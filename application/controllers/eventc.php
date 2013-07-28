@@ -70,5 +70,23 @@ class Eventc extends CI_Controller {
 		$this->load->view('footer');
 
 	}	
+
+	public function lookup($slug) {
+		$this->load->model('eventc_model');
+		$this->load->model('questionc_model');
+
+		$event_details = $this->eventc_model->getEventBySlug($slug);
+		$questions_details = $this->questionc_model->getQuestionsById($event_details->eventid);
+
+		$this->load->view('nav', $this->userdata);
+		$this->load->view('event_main', 
+			array_merge(
+				array('event'=>(array)json_decode(json_encode($event_details))), 
+				array('questions' => $questions_details)
+			));
+		$this->load->view('footer');
+
+
+	}
 }
 
