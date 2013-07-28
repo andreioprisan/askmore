@@ -3176,3 +3176,5 @@ section.typography{
     font-color: black;
     background-image: none;
 }
+
+.navbar-inner{margin-bottom: -20px;}
