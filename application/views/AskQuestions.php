@@ -23,8 +23,6 @@
 				$(this).prev().text(currentScore - 1);
 				$(this).prev().prev().find('.upArrowImg').attr("src", "http://askmorenow.com/public/img/upArrow.jpg") ;
 
-
-
 			});
 		});
 	</script>
