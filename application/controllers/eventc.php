@@ -71,3 +71,4 @@ class Eventc extends CI_Controller {
 
 	}	
 }
+

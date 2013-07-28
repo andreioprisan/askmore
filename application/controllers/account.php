@@ -35,14 +35,9 @@ class Account extends CI_Controller {
 		$userDetails = $this->account_model->loginVerify($input['inputEmail'], $input['inputPassword1']);
 		if ($userDetails) {
 			$in = (array)$userDetails;
-			$this->session->set_userdata('userid', $in['userid']);
-			$this->session->set_userdata('name', $in['name']);
-			$this->session->set_userdata('email', $in['email']);
-			$this->session->set_userdata('password', $in['password']);
-			$this->session->set_userdata('handle', $in['handle']);
 			
 			setcookie('ask', base64_encode(json_encode($in)), time()+3600, '/', '.'.$_SERVER['SERVER_NAME']);
-		    header('Location: /home');
+			header('Location: /home');
 		    return;
 		} else {
 		    header('Location: /login?error=2');
