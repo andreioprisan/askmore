@@ -8,6 +8,36 @@ class Questionc_model extends CI_Model
 		parent::__construct();
 	}
 
+	public function getupdatedsince($timestamp, $eventid) {
+		$bigresults = array(
+			'updates'=> null,
+			'new' => null);
+
+		$datetime = date('Y-m-d H:i:s', $timestamp);
+
+		$sql = "select questionid, score from questions where eventid = '".$eventid."' and lastupdatedat > '".$datetime."'";
+		$query = $this->db->query($sql);
+		$results = $query->result();
+		if (count($results) != 0) {
+			foreach ($results as $result) {
+				$bigresults['updates'][] = array('q' => $result->questionid, 'score' => $result->score);
+			}
+		}
+
+		$sql = "select * from questions where eventid = '".$eventid."' and createdat > '".$datetime."'";
+		$query = $this->db->query($sql);
+		$results = $query->result();
+		if (count($results) != 0) {
+			foreach ($results as $result) {
+				unset($result->lastupdatedat);
+				$result->createdat = date('m/d/y h:iA', strtotime($result->createdat));
+				$bigresults['new'][] = (array)$result;
+			}
+		}
+
+		return $bigresults;		
+
+	}
 
 	public function saveNew($eventid, $content, $source, $author)
 	{
@@ -28,12 +58,12 @@ class Questionc_model extends CI_Model
 	}
 
 	public function downvote($questionid) {
-		$sql = 'update questions set score=score-1 where questionid = "'.$questionid.'"';
+		$sql = 'update questions set score=score-1, lastupdatedat="'.date("Y-m-d H:i:s").'" where questionid = "'.$questionid.'"';
 		$query = $this->db->query($sql);
 	}
 
 	public function upvote($questionid) {
-		$sql = 'update questions set score=score+1 where questionid = "'.$questionid.'"';
+		$sql = 'update questions set score=score+1, lastupdatedat="'.date("Y-m-d H:i:s").'" where questionid = "'.$questionid.'"';
 		$query = $this->db->query($sql);
 	}
 

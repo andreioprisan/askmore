@@ -62,6 +62,14 @@ $route['question/create/save'] = "questionc/createnew";
 $route['question/(:any)/upvote'] = "questionc/upvote/$1";
 $route['question/(:any)/downvote'] = "questionc/downvote/$1";
 $route['question/(:any)/delete/(:any)'] = "questionc/delete/$1/$2";
+$route['question/updatedsince/(:any)/(:any)'] = "questionc/getupdatedsince/$1/$2";
+
+
+
+// twitter
+$route['twitter/crawl'] = "twitter/crawl";
+$route['twitter/sync'] = "twitter/sync";
+
 
 #twilio
 $route['twiml/sms'] = "twiml/sms";

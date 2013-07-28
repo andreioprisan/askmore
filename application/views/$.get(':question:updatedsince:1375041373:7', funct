@@ -1,0 +1,33 @@
+$.get('/question/updatedsince/1375041373/7', function(data) {
+	if (_.size(data.updates) > 0) {
+		_.each(data.updates, function(item) {
+			$('#'+item.q+' .questionScore').fadeOut();
+			$('#'+item.q+' .questionScore').text(item.score);
+			$('#'+item.q+' .questionScore').fadeIn();
+		});
+	} 
+
+	if (_.size(data.new) > 0) {
+		_.each(data.new, function(item) {
+
+			var newdom = '<tr>\
+	          <td style="width: 5%; text-align: center; display:none" id="'+item.questionid+'">\
+	            <span data-qid="'+item.questionid+'" class="icon-chevron-up upArrowW" style="color: gray; font-size: 20px;"></span><br>\
+	            <span class="questionScore" style="font-weight: bold; display: inline;">'+item.questionid+'</span><br>\
+	            <span data-qid="'+item.questionid+'" class="icon-chevron-down downArrowW" style="color: gray; font-size: 20px;"></span>\
+	          </td>\
+	          <td>'+item.text+'<br>\
+	              asked by <b>'+item.author+'</b> via <b>'+item.source+'</b> on  <b>'+item.createdat+'</b>\
+	          </td>\
+	          <td style="width: 5%">\
+	          </td>\
+	        </tr>';
+
+	        $("#mainList tr:first").before(newdom);
+			$('#'+item.questionid).fadeIn();
+			$('#'+item.questionid).parent().fadeIn();
+		});
+	}
+
+	console.log(data);
+});
