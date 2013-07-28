@@ -7,6 +7,16 @@ class Questionc extends CI_Controller {
 
 	}
 
+	public function upvote($questionid) {
+		$this->load->model('questionc_model');
+		$this->questionc_model->upvote($questionid);
+	}
+
+	public function downvote($questionid) {
+		$this->load->model('questionc_model');
+		$this->questionc_model->downvote($questionid);
+	}
+	
 	public function createnew() {
 		$this->load->model('questionc_model');
 

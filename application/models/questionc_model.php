@@ -23,6 +23,15 @@ class Questionc_model extends CI_Model
 		$this->db->insert('questions', $question);
 	}
 
+	public function downvote($questionid) {
+		$sql = 'update questions set score=score-1 where questionid = "'.$questionid.'"';
+		$query = $this->db->query($sql);
+	}
+
+	public function upvote($questionid) {
+		$sql = 'update questions set score=score+1 where questionid = "'.$questionid.'"';
+		$query = $this->db->query($sql);
+	}
 
 	public function getQuestionsById($eventid) {
 		$sql = 'select * from questions where eventid="'.$eventid.'" order by score desc, createdat desc';

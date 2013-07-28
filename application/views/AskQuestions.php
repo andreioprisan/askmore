@@ -20,6 +20,13 @@
 				$(this).next().text(currentScore + 1);
 				$(this).next().next().find('.downArrowImg').attr("src", "http://askmo.re/public/img/downArrow.jpg") ;
 				
+				qid = $(this).data("qid");
+				if (qid != undefined) {
+					$.post('/question/'+qid+'/upvote', function(data) {
+					});
+				}
+
+
 				totalvotes--;
 			});
 
@@ -33,6 +40,12 @@
 				$(this).prev().text(currentScore - 1);
 				$(this).prev().prev().find('.upArrowImg').attr("src", "http://askmo.re/public/img/upArrow.jpg") ;
 				
+				qid = $(this).data("qid");
+				if (qid != undefined) {
+					$.post('/question/'+qid+'/downvote', function(data) {
+					});
+				}
+
 				totalvotes--;
 			});
 		});
@@ -69,11 +82,11 @@
 					<div class="questionMeta">
 						<div class="questionNo">&nbsp;<?php #echo $questionnum ?></div>
 						<div class="questionScoreDivDiv">
-							<div class="upArrow">
+							<div class="upArrow" data-qid="<?php echo $question->questionid ?>">
 								<img class="upArrowImg" src="public/img/upArrow.jpg">
 							</div>
 							<div class="questionScoreDiv"><?php echo $question->score ?></div>
-							<div class="downArrow">
+							<div class="downArrow" data-qid="<?php echo $question->questionid ?>">
 								<img class="downArrowImg" src="public/img/downArrow.jpg">
 							</div>
 						</div>

@@ -57,6 +57,8 @@ $route['event/create/save'] = "eventc/createnew";
 $route['events'] = "events/index";
 
 $route['question/create/save'] = "questionc/createnew";
+$route['question/(:any)/upvote'] = "questionc/upvote/$1";
+$route['question/(:any)/downvote'] = "questionc/downvote/$1";
 
 #twilio
 $route['twiml/sms'] = "twiml/sms";
