@@ -60,22 +60,24 @@ body {
 .iphoneEmulator{max-width:650px;margin:0 auto;padding:0;}
 .addAuthor{display:none;}
 .headerControl{text-align:center;padding:0px; margin-top: 3px; margin-left: 3px;}
-.logoTiny{width:100px;height:20px;float:left;}
+.logoTiny{width:100px;height:20px;float:left;padding: 5px 0px 0px 5px;}
 .tinyLogoImg{height:20px;}
-#sort{text-align:right; margin-right: 5px; font-size:small;color:0;}
+#sort{text-align:right; margin-right: 5px; font-size:small;color:0;padding: 5px 5px 0px 0px;}
 .questionBlock p{margin:0;}
 .borderBottom{width:90%;max-width:500px;height:2px;background:url(../img/line-sep.jpg) repeat-x;clear:both;padding-bottom:7px;}
 .questionNo{vertical-align:middle;color:#c6c6c6;font-family:Arial;font-size:medium;line-height:60px;width:20px;float:left;text-align:center;}
 .questionScoreDiv{color:#c6c6c6;font-weight:700;font-size:small;text-align:center;}
 .upArrowImg,.downArrowImg{height:20px;width:30px;}
-.userQuestion{float:left;width:80%;}
+.userQuestion{float:left;width:85%;}
 .userName{font-weight:700;padding-bottom:5px;}
 .submitButton{margin-bottom:5px;}
 .gap{clear:both;width:100%;padding-bottom:85px;}
 #writeQuestion{width:95%;max-width:350px;}
 #authorInput{width:70%;max-width:250px;}
-.questionMeta{width:50px;padding-right:10px;float:left;}
-.topnav1{background:#fff;position:fixed;margin-top:0;width:100%;}
+.questionMeta{width:40px;padding-right:10px;float:left;}
+.topnav1{background:#fff;margin-top:0;width:100%;}
+.topnavfloatie{background:#fff;position:fixed;margin-top:0;width:100%;}
+.questonHeader{margin-bottom: -15px;margin-top: -10px;}
 
 
 

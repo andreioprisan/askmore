@@ -8,62 +8,9 @@
   <link href="/public/css/font-awesome.min.css" rel="stylesheet">
   <link href="/public/css/app.css" rel="stylesheet">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  
-  <script>
-    $(document).ready(function(){
-      totalvotes = 1;
-
-      $(".upArrowW").click(function() {
-        if (totalvotes <= 0 || $(this).hasClass('disabled')) {
-          console.log(totalvotes);
-          return;
-        } 
-
-        console.log("up");
-
-        $(this).css('color','lightgreen');
-        $(this).addClass('disabled');
-
-        var currentScore = parseInt($(this).next().next().text());
-        $(this).next().next().text(currentScore + 1);
-        
-        qid = $(this).data("qid");
-        if (qid != undefined) {
-          $.post('/question/'+qid+'/upvote', function(data) {
-          });
-        }
-
-
-        totalvotes--;
-      });
-
-      $(".downArrowW").click(function() {
-        if (totalvotes <= 0 || $(this).hasClass('disabled')) {
-          console.log(totalvotes);
-          return;
-        } 
-
-        console.log("down");
-
-        $(this).css('color','red');
-        var currentScore = parseInt($(this).prev().prev().text());
-        $(this).prev().prev().text(currentScore - 1);
-        $(this).addClass('disabled');
-        
-        qid = $(this).data("qid");
-        if (qid != undefined) {
-          $.post('/question/'+qid+'/downvote', function(data) {
-          });
-        }
-
-        totalvotes--;
-      });
-
-      });  
-  </script>
+  <script src="/public/js/app.js"></script>
 </head>
-
-<html>
-
+<body>
 <div class="navbar">
   <div class="navbar-inner">
     <a class="brand" href="/"><img src="/public/img/AskMoreLogo_tiny.png" style="height: 30px"></a>

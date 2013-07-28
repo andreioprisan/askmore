@@ -1,8 +1,9 @@
 <body>
-	<div class="iphoneEmulator">
-		
+<!--	<div class="iphoneEmulator">-->
+	<div class="">
+
 		<div class="topnav1">
-			<div class="headerControl">
+			<div class="headerControl topnavfloatie" style="">
 				<div class="logoTiny"><img class="tinyLogoImg" src="/public/img/AskMoreLogo_tiny.png"></div>
 				<div id="sort" class="">Sort: 
 					<?php
@@ -28,7 +29,7 @@
 					
 					<div class="addAuthor input-prepend input-append">
 					  	<span class="add-on">optional</span>
-						<input class="span1"  style=""  id="authorInput" name="author" type="text" value="Your name [optional]" onfocus="if (this.value == 'Your name [optional]') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Your name [optional]';}">
+						<input class="span1"  style=""  id="authorInput" name="author" type="text" value="Your name" onfocus="if (this.value == 'Your name') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Your name';}">
 
 						<input type="submit" style="margin-left: 5px" class="submitButton" name="submitQuestion" value="Go" class="btn btn-primary" /> 
 					</div>

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="page-header">
     <h1><?php echo $event['name'] ?> <small><font color="black">#<?php echo $event['hashtag'] ?></font> 
-      <span class="pull-right"><?php echo $event['location'] ?> <span class="label label-important" style="font-size: 18px; font-weight:100;"><?php echo $event['phone'] ?></span></span>
+      <span class="pull-right"> <span class="label label-important" style="font-size: 18px; font-weight:100;"><?php echo $event['phone'] ?></span> <?php echo $event['location'] ?></span>
       </small>
     </h1>
   </div>
