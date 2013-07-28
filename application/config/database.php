@@ -54,7 +54,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
-$db['default']['password'] = 'secret';
+$db['default']['password'] = 'mysqlpass';
 $db['default']['database'] = 'askmore';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
