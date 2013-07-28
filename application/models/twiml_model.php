@@ -10,7 +10,7 @@ class Twiml_model extends CI_Model
 	
 	public function save($data) 
 	{
-		$this->db->insert('raw', $data);
+		$this->db->insert('raw', array('data' => json_encode($data)));
 	}
 
 }
