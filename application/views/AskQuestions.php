@@ -1,5 +1,6 @@
 <body>
 	<div class="iphoneEmulator">
+		
 		<div class="topnav1">
 			<div class="headerControl">
 				<div class="logoTiny"><img class="tinyLogoImg" src="/public/img/AskMoreLogo_tiny.png"></div>
@@ -40,22 +41,21 @@
 	        <?php foreach($questions as $question) { 
 	        	$questionnum++;?>
 
-				<div class="questionBlock">
-					<div class="questionMeta">
-						<div class="questionNo">&nbsp;<?php #echo $questionnum ?></div>
-						<div class="questionScoreDivDiv" style="text-align: center;">
-				            <span data-qid="<?php echo $question->questionid ?>" class="icon-chevron-up upArrowW" style="color: gray; font-size: 20px;"></span><br>
-				            <span style="font-weight: bold;"><?php echo $question->score ?></span><br>
-				            <i data-qid="<?php echo $question->questionid ?>" class="icon-chevron-down downArrowW"  style="color: gray; font-size: 20px;"></i>
-						</div>
-					</div>
-					<div class="userQuestion">
-						<p><?php echo $question->text ?></p>
-						<div class="" style="font-size: 80%">asked by <b><?php echo $question->author ?></b> via <b><?php echo $question->source ?></b> on <b><?php echo date('m/d/y h:iA', strtotime($question->createdat)) ?></b></div>
-					</div>
+		<div class="questionBlock">
+			<div class="questionMeta">
+				<div class="questionNo">&nbsp;<?php #echo $questionnum ?></div>
+				<div class="questionScoreDivDiv" style="text-align: center;">
+		            <span data-qid="<?php echo $question->questionid ?>" class="icon-chevron-up upArrowW" style="color: gray; font-size: 20px;"></span><br>
+		            <span style="font-weight: bold;"><?php echo $question->score ?></span><br>
+		            <i data-qid="<?php echo $question->questionid ?>" class="icon-chevron-down downArrowW"  style="color: gray; font-size: 20px;"></i>
 				</div>
-				<div class="borderBottom"></div>
-			<!--<div class="gap"></div>-->
+			</div>
+			<div class="userQuestion">
+				<p><?php echo $question->text ?></p>
+				<div class="" style="font-size: 80%">asked by <b><?php echo $question->author ?></b> via <b><?php echo $question->source ?></b> on <b><?php echo date('m/d/y h:iA', strtotime($question->createdat)) ?></b></div>
+			</div>
+		</div>
+		<div class="borderBottom"></div>
 
 	        <?php } ?>
 
