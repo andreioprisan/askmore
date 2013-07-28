@@ -12,9 +12,12 @@
 					<input type="hidden" name="eventid" value="<?php echo $event['eventid'] ?>">
 					<input type="hidden" name="backto" value="/<?php echo $event['slug'] ?>">
 					<input style="margin-left: 5px;" id="writeQuestion" name="question" type="text" value="Ask a question" onfocus="if (this.value == 'Ask a question') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Ask a question';}" maxlength="140">
-					<div class="addAuthor">
-						<input style="margin-left: 5px;"  id="authorInput" name="author" type="text" value="Your name [optional]" onfocus="if (this.value == 'Your name [optional]') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Your name [optional]';}">
-						<input type="submit" class="submitButton" name="submitQuestion" value="Go" class="btn btn-primary" /> 
+					
+					<div class="addAuthor input-prepend input-append">
+					  	<span class="add-on">optional</span>
+						<input class="span1"  style=""  id="authorInput" name="author" type="text" value="Your name [optional]" onfocus="if (this.value == 'Your name [optional]') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Your name [optional]';}">
+
+						<input type="submit" style="margin-left: 5px" class="submitButton" name="submitQuestion" value="Go" class="btn btn-primary" /> 
 					</div>
 				</form>
 			</div>
