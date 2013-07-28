@@ -62,12 +62,12 @@ body {
 
 .questionHeader{}
 .addAuthor{display:none}
-.headerControl{padding:10px;text-align: center;}
+.headerControl{padding:0px;text-align: center; padding-top: 5px;}
 .logoTiny{width: 100px; height:20px;
 	float:left;}
 
 	.tinyLogoImg{height:20px;}
-	#sort{text-align:left; margin-left: 150px; font-size: small; color:999;}
+	#sort{text-align:right; margin-right: 20px; font-size: small; color:999;}
 	.questionBlock{}
 	.questionBlock p{margin:0; }
 
