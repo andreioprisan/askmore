@@ -73,8 +73,8 @@ class Eventc extends CI_Controller {
 
 	public function lookup($slug) {
 		$isMobile = false;
-		if ($_SERVER['HTTP_HOST'] == "m.askmo.re" ||
-			$_SERVER['HTTPS_HOST'] == "m.askmo.re") {
+		if ((isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] == "m.askmo.re") ||
+			(isset($_SERVER['HTTPS_HOST']) && $_SERVER['HTTPS_HOST'] == "m.askmo.re")) {
 			$isMobile = true;
 		}
 
