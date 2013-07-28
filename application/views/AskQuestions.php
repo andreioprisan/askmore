@@ -128,9 +128,10 @@
 			</div>
 			<div class="userQuestion">
 				<p>Lorem ipsum dolor sit amet?</p>
-				<div class="userName">Trail Mix</div>
+				<div class="userName">Trsail Mix</div>
 			</div>
 		</div>
+
 		<div class="borderBottom"></div>
 		<div class="questionBlock">
 			<div class="questionMeta">
