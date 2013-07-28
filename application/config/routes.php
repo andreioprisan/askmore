@@ -49,6 +49,10 @@ $route['event/list'] = "eventc/list_a";
 $route['event/edit'] = "eventc/edit";
 $route['event/create'] = "eventc/create";
 $route['event/create/save'] = "eventc/createnew";
+
+$route['question/create/save'] = "questionc/createnew";
+
+#twilio
 $route['twiml/sms'] = "twiml/sms";
 $route['twiml/voice'] = "twiml/voice";
 

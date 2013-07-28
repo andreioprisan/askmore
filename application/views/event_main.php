@@ -6,6 +6,14 @@
       </small>
     </h1>
   </div>
+    <form class="form-search" action="/question/create/save" method="post">
+      <input type="hidden" name="eventid" value="<?php echo $event['eventid'] ?>">
+      <input type="hidden" name="backto" value="/<?php echo $event['slug'] ?>">
+      <input type="text" class="input-medium search-query span8" maxlength="200" name="question" placeholder="Your Question">
+      <input type="text" class="input-medium search-query span2" maxlength="20" name="author" placeholder="Your Name">
+      <button type="submit" class="btn btn-primary">Ask Now!</button>
+    </form>
+    <hr>
   	<?php if (isset($questions) && $questions_count != 0 ) { ?>
     <table class="table">
       <thead>
