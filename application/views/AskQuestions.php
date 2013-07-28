@@ -59,8 +59,7 @@
 				</form>
 			</div>
 		</div>
-		<div class="gap"></div>
-
+		<hr>
 	  	<?php if (isset($questions) && $questions_count != 0 ) { 
 	  		$questionnum = 0;?>
 	        <?php foreach($questions as $question) { 
