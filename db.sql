@@ -184,10 +184,16 @@ INSERT INTO `search_terms` (`id`, `term`) VALUES
 (1, 'yolo'),
 (2, 'fact');
 
-CREATE TABLE IF NOT EXISTS `tweets` (
+CREATE TABLE `tweets` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `tweet_id` text NOT NULL,
-  `user_id` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
+  `created_at` datetime NOT NULL,
+  `author` varchar(100) NOT NULL,
+  `terms` varchar(100) NOT NULL,
+  `text` varchar(250) NOT NULL,
+  `hash` varchar(254) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `hash` (`hash`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=141 ;
+
+
 
