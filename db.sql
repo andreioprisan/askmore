@@ -169,3 +169,25 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`userid`, `name`, `email`, `password`, `handle`) VALUES
 (1, 'Andrei Oprisan', 'andrei@oprisan.com', 'b695810086a5213f4e70736c5e384b646e4363b8', '@andreioprisan'),
 (2, 'Joe Moe', 'andrei.oprisan@mac.com', '095cb54da1a3457e964d1d25b795857fb4d4a63f', '@test');
+
+
+
+-- twitter
+
+CREATE TABLE IF NOT EXISTS `search_terms` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `term` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
+
+INSERT INTO `search_terms` (`id`, `term`) VALUES 
+(1, 'yolo'),
+(2, 'fact');
+
+CREATE TABLE IF NOT EXISTS `tweets` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `tweet_id` text NOT NULL,
+  `user_id` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
+
