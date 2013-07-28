@@ -34,7 +34,6 @@
 				</form>
 			</div>
 		</div>
-		<div class="gap"></div>
 
 	  	<?php if (isset($questions) && $questions_count != 0 ) { 
 	  		$questionnum = 0;?>
