@@ -35,7 +35,7 @@
             <i  data-qid="<?php echo $question->questionid ?>" class="icon-chevron-down downArrowW"  style="color: gray; font-size: 20px;"></i>
           </td>
           <td><?php echo $question->text ?><br>
-              asked by <b><?php echo $question->author ?></b> via <b><?php echo $question->source ?></b> on  <b><?php echo date('m/d/Y H:i', strtotime($question->createdat)) ?></b>
+              asked by <b><?php if ($question->author != null) { echo $question->author; } else { echo "anonymous"; } ?></b> via <b><?php echo $question->source ?></b> on  <b><?php echo date('m/d/Y H:i', strtotime($question->createdat)) ?></b>
           </td>
           <td style="width: 5%">
             <?php if ($isModerator) { ?>
