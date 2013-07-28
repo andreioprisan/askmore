@@ -36,6 +36,7 @@
 			</div>
 			<div class="questonHeader">
 				<form action="/question/create/save" method="post">
+					<input type="hidden" name="source" value="mobile">
 					<input type="hidden" name="eventid" value="<?php echo $event['eventid'] ?>">
 					<input type="hidden" name="backto" value="/<?php echo $event['slug'] ?>">
 					<input id="writeQuestion" name="question" type="text" value="Ask a question" onfocus="if (this.value == 'Ask a question') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Ask a question';}" maxlength="140">

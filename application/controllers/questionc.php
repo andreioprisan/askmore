@@ -25,7 +25,13 @@ class Questionc extends CI_Controller {
 			$input['author'] = "anonymous";
 		}
 
-		$this->questionc_model->saveNew($input['eventid'], $input['question'], 'app', $input['author']);
+		if (isset($input['source'])) {
+			$source = $input['source'];
+		} else {
+			$source = "web";
+		}
+		$this->questionc_model->saveNew($input['eventid'], $input['question'], $source, $input['author']);
+		
 		$loc = 'Location: '.$input['backto'];
 		header($loc);
 
