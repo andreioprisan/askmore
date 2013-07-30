@@ -21,7 +21,6 @@
       </tr>
     </thead>
     <tbody>
-      <?php var_dump($eventsList);?>
       <?php 
       foreach($eventsList as $event) { ?>
       <tr>

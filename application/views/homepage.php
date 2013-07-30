@@ -101,6 +101,11 @@
 
       				<div class="row margintop20 span15">
 
+                                        <div class="span5">
+                                                <h2><i class="icon-bar-chart"></i> AskNow</h2>
+                                                <p>Send in your questions live during the event, before the event or after the speaker has opened for questions. </p>
+                                        </div><!-- /span4 -->
+
       					<div class="span5">
       						<h2><i class="icon-briefcase"></i> AskMore</h2>
       						<p> Don't be afraid to speak up. <br />Ask questions via twitter SMS, web, or mobile to ensure you are always heard. </p>
@@ -108,11 +113,6 @@
       					<div class="span5">
       						<h2><i class="icon-bullhorn"></i> AskBetter</h2>
       						<p>Use our crowd-source techonolgy to let the audience rank questions by importance. <br /> Let you audience decide what questions they want answered.</p>
-
-      					</div><!-- /span4 -->
-      					<div class="span5">
-      						<h2><i class="icon-bar-chart"></i> AskNow</h2>
-      						<p>Send in your questions live during the event, before the event or after the speaker has opened for questions. </p>
 
       					</div><!-- /span4 -->
       				</div>
@@ -182,6 +182,26 @@
 
       				<div class="row center">
 
+						<div class=" margintop20 span5">
+                                                        <div class="row left">
+                                                                <div class="span1"><i class="icon-group support-icon color3"></i></div>
+                                                                <div class="span4">
+                                                                        <h2>Crowd Sourced</h2>
+                                                                        <ul class="unstyled">
+                                                                                        <li><i class="icon-ok"></i> Vote up or down questions to rank</li>
+                                                                        <li><i class="icon-ok"></i> Ask the questions your audience wants to hear </li>
+                                                                        <li><i class="icon-ok"></i> Efficient use of everyone's time </li>
+                                                                        </ul>
+								</div>
+                                                        </div>
+                                               </div>
+
+
+
+
+
+
+
 
       					<div class="span4 margintop20 ">
       						<div class="row left">
@@ -207,23 +227,10 @@
       									<li><i class="icon-ok"></i> No setup required</li>
       									<li><i class="icon-ok"></i> No app to download</li>
       									<li><i class="icon-ok"></i> Ask via mobile, web or Twitter </li>
-      								</ul></div>
-      							</div>
+      								</ul>
+							</div>
       						</div>
-      						<div class=" margintop20 span5">
-      							<div class="row left">
-      								<div class="span1"><i class="icon-group support-icon color3"></i></div>
-      								<div class="span4">
-      									<h2>Crowd Sourced</h2>
-      									<ul class="unstyled">
-      											<li><i class="icon-ok"></i> Vote up or down questions to rank</li>
-      									<li><i class="icon-ok"></i> Ask the questions your audience wants to hear </li>
-      									<li><i class="icon-ok"></i> Efficient use of everyone's time </li>
-      									</ul></div>
-      								</div>
-      							</div>
-      							
-
+      					</div>
 
 
 
