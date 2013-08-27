@@ -17,7 +17,7 @@
 <body>
 <div class="navbar">
   <div class="navbar-inner">
-    <a class="brand" href="/"><img src="/public/img/AskMoreLogo_tiny.png" style="height: 30px"> real-time questions during your event</a>
+    <a class="brand" href="/">Askmore - real-time questions during your event</a>
 
       <?php if (isset($userid) && isset($password) && $userid != 0 && $password != null) { ?>
       <ul class="nav pull-right">
@@ -34,18 +34,6 @@
       </ul>      
       <?php } else { ?>
       <ul class="nav pull-right">
-        <li>
-          <a href="/#howitworks">How it works</a>
-        </li>
-        <li>
-          <a href="/#liveevents">Live Events</a>
-        </li>
-        <li>
-          <a href="/#testimonials">Testimonials</a>
-        </li>
-        <li>
-          <a href="/#plans">Plans</a>
-        </li>
         <li class="">
           <a href="/login">Login</a>
         </li>

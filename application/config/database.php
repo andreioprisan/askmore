@@ -70,7 +70,7 @@ $db['default']['stricton'] = FALSE;
 
 $db['prod']['hostname'] = 'localhost';
 $db['prod']['username'] = 'root';
-$db['prod']['password'] = 'a2gn4vy2o87g3hwue';
+$db['prod']['password'] = 'mysqlpass';
 $db['prod']['database'] = 'askmore';
 $db['prod']['dbdriver'] = 'mysql';
 $db['prod']['dbprefix'] = '';

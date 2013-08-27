@@ -10,8 +10,8 @@ class Eventc_model extends CI_Model
 
 	public function initTwilio() {
 		require_once(getcwd()."/application/libraries/twilio/Services/Twilio.php");
-		$sid = "ACc223f6e1d1d2488d8efeeb319286f22c";
-		$token = "9ed18b079156d238b7b1517e34a4e2a9";
+		$sid = "PROVIDE";
+		$token = "PROVIDE";
 
 		$client = new Services_Twilio($sid, $token);
 		return $client;

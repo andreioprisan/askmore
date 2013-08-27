@@ -6,8 +6,7 @@ class Welcome extends CI_Controller {
 	{
 
 		$this->load->view('nav');
-		$this->load->view('homepage');
-		//$this->load->view('welcome');
+		$this->load->view('welcome');
 		$this->load->view('footer');
 	}
 
