@@ -1,6 +1,6 @@
 AskMore built at Boston Startup Weekend 2013
 
-### PHP CodeIgniter App
+### PHP/MySQL CodeIgniter App
 
 Provides for real-time question asking service via web and iPhone view, as well as SMS/voice (via Twilio), email (via Mailgun) and Twitter.
 
